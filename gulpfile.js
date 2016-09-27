@@ -61,7 +61,7 @@ gulp.task('webserver', function () {
 
 // css 预处理 和 压缩
 var cssFiles = [
-  './src/styles/usage/page/index.scss'
+  './src/styles/usage/page/app.scss'
 ];
 gulp.task('scss', function () {
   gulp.src(cssFiles)
