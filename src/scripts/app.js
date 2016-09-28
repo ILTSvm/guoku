@@ -1,4 +1,5 @@
-var str = require('./common.js');
 
-console.log(str);
+
+require('./views/index.js');
+
 
