@@ -1,4 +1,3 @@
-
 // 引入 gulp 工具
 var gulp = require('gulp');
 
@@ -19,8 +18,8 @@ var fs = require('fs');
 var url = require('url');
 
 // 引入 rev revCollector 模块
-var rev = require('gulp-rev');
-var revCollector = require('gulp-rev-collector');
+// var rev = require('gulp-rev');
+// var revCollector = require('gulp-rev-collector');
 
 // 引入 gulp-sequence 模块
 var sequence = require('gulp-sequence');
@@ -35,27 +34,27 @@ gulp.task('webserver', function () {
         enable: true,
         path: './'
       },
-      livereload: true
+      livereload: true,
 
       // mock 数据
-      // middleware: function (req, res, next) {
-      //   var urlObj = url.parse(req.url, true);
-      //   switch (urlObj.pathname) {
-      //     case '/api/orders.php':
-      //       res.setHeader('Content-Type', 'application/json');
-      //       fs.readFile('./mock/list.json', function (err, data) {
-      //         res.end(data);
-      //       });
-      //       return;
-      //     case '/api/users':
-      //       // ...
-      //       return;
-      //     case '/api/cart':
-      //       // ...
-      //       return;
-      //   }
-      //   next();
-      // }
+      middleware: function (req, res, next) {
+        var urlObj = url.parse(req.url, true);
+        switch (urlObj.pathname) {
+          case '/api/list.php':
+            res.setHeader('Content-Type', 'application/json');
+            fs.readFile('./mock/list.json', function (err, data) {
+              res.end(data);
+            });
+            return;
+          case '/api/users':
+            // ...
+            return;
+          case '/api/cart':
+            // ...
+            return;
+        }
+        next();
+      }
     }))
 });
 
@@ -86,14 +85,22 @@ gulp.task('packjs', function () {
           {
             test: /\.js$/,
             loader: 'imports?define=>false'
+            // exclude: './src/scripts/libs/zepto.js'
+          },
+          {
+            test: /\.string$/,
+            loader: 'string'
+          },
+          { test: /\.html|\.json$/,
+            loader: "string" 
           }
         ]
       }
     }))
-    .pipe(uglify().on('error', function (err) {
-      console.log('\x07', err.lineNumber, err.message);
-      return this.end();
-    }))
+    // .pipe(uglify().on('error', function (err) {
+    //   console.log('\x07', err.lineNumber, err.message);
+    //   return this.end();
+    // }))
     .pipe(gulp.dest('./build/prd/scripts/'));
 });
 
@@ -106,19 +113,19 @@ var jsDistFiles = [
 ];
 gulp.task('ver', function () {
   gulp.src(cssDistFiles)
-    .pipe(rev())
+    // .pipe(rev())
     .pipe(gulp.dest('./build/prd/styles/'))
     .pipe(rev.manifest())
     .pipe(gulp.dest('./build/ver/styles/'));
   gulp.src(jsDistFiles)
-    .pipe(rev())
+    // .pipe(rev())
     .pipe(gulp.dest('./build/prd/scripts/'))
     .pipe(rev.manifest())
     .pipe(gulp.dest('./build/ver/scripts/'));
 });
 gulp.task('html', function () {
   gulp.src(['./build/ver/**/*', './build/*.html'])
-    .pipe(revCollector())
+    // .pipe(revCollector())
     .pipe(gulp.dest('./build/'));
 });
 gulp.task('min', sequence('copy-index','ver', 'html'));
@@ -139,8 +146,8 @@ gulp.task('copy-images', function () {
 gulp.task('watch', function () {
   gulp.watch('./index.html', ['copy-index']);
   gulp.watch('./images/**/*', ['copy-images']);
-  gulp.watch('./src/styles/usage/page/*.{scss,css}', ['scss', 'min']);
-  gulp.watch('./src/scripts/*.js', ['packjs', 'min']);
+  gulp.watch('./src/styles/usage/page/**/*', ['scss']);
+  gulp.watch('./src/scripts/**/*', ['packjs']);
 });
 
 // 配置 default 任务，执行任务队列
