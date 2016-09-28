@@ -76,7 +76,6 @@
 	var str = __webpack_require__(5);
 
 	var header = __webpack_require__(6);
-
 	common.render(str);
 	common.render(header);
 
