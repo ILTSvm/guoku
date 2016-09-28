@@ -1,1 +1,3 @@
-module.exports = 'hello Webpack';
+
+module.exports = "Hello xpc";
+
