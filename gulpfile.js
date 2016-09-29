@@ -30,7 +30,7 @@ gulp.task('webserver', function () {
   gulp.src('./')
     .pipe(webserver({
       host: 'localhost',
-      port: 8081,
+      port: 80,
       directoryListing: {
         enable: true,
         path: './'
@@ -60,11 +60,11 @@ gulp.task('webserver', function () {
 });
 
 // css 预处理 和 压缩
-var cssFiles = [
-  './src/styles/usage/page/app.scss'
-];
+//var cssFiles = [
+//'./src/styles/pages/app.scss'
+//];
 gulp.task('scss', function () {
-  gulp.src(cssFiles)
+  gulp.src('./src/styles/pages/*.scss')
     .pipe(sass().on('error', sass.logError))
     // .pipe(minifyCSS())
     .pipe(gulp.dest('./build/prd/styles/'));
@@ -75,7 +75,7 @@ var jsFiles = [
   './src/scripts/app.js'
 ];
 gulp.task('packjs', function () {
-  gulp.src(jsFiles)
+  gulp.src('./src/scripts/pages/*.js')
     .pipe(named())
     .pipe(webpack({
       output: {
@@ -106,34 +106,34 @@ gulp.task('packjs', function () {
 });
 
 // 版本号控制
-var cssDistFiles = [
-  './build/prd/styles/app.css'
-];
-var jsDistFiles = [
-  './build/prd/scripts/app.js'
-];
-gulp.task('ver', function () {
-  gulp.src(cssDistFiles)
-    // .pipe(rev())
-    .pipe(gulp.dest('./build/prd/styles/'))
-    .pipe(rev.manifest())
-    .pipe(gulp.dest('./build/ver/styles/'));
-  gulp.src(jsDistFiles)
-    // .pipe(rev())
-    .pipe(gulp.dest('./build/prd/scripts/'))
-    .pipe(rev.manifest())
-    .pipe(gulp.dest('./build/ver/scripts/'));
-});
-gulp.task('html', function () {
-  gulp.src(['./build/ver/**/*', './build/*.html'])
-    // .pipe(revCollector())
-    .pipe(gulp.dest('./build/'));
-});
-gulp.task('min', sequence('copy-index','ver', 'html'));
+//var cssDistFiles = [
+//'./build/prd/styles/app.css'
+//];
+//var jsDistFiles = [
+//'./build/prd/scripts/app.js'
+//];
+//gulp.task('ver', function () {
+//gulp.src(cssDistFiles)
+//  // .pipe(rev())
+//  .pipe(gulp.dest('./build/prd/styles/'))
+//  .pipe(rev.manifest())
+//  .pipe(gulp.dest('./build/ver/styles/'));
+//gulp.src(jsDistFiles)
+//  // .pipe(rev())
+//  .pipe(gulp.dest('./build/prd/scripts/'))
+//  .pipe(rev.manifest())
+//  .pipe(gulp.dest('./build/ver/scripts/'));
+//});
+//gulp.task('html', function () {
+//gulp.src(['./build/ver/**/*', './build/*.html'])
+//  // .pipe(revCollector())
+//  .pipe(gulp.dest('./build/'));
+//});
+//gulp.task('min', sequence('copy-index','ver', 'html'));
 
 // 拷贝 index.html 到 build 文件夹
 gulp.task('copy-index', function () {
-  gulp.src('./index.html')
+  gulp.src('./pages/*.html')
     .pipe(gulp.dest('./build'));
 });
 
@@ -145,10 +145,10 @@ gulp.task('copy-images', function () {
 
 // 侦测 文件变化， 执行相应任务
 gulp.task('watch', function () {
-  gulp.watch('./index.html', ['copy-index']);
+  gulp.watch('./pages/*.html', ['copy-index']);
   gulp.watch('./images/**/*', ['copy-images']);
-  gulp.watch('./src/styles/usage/page/**/*', ['scss']);
-  gulp.watch('./src/scripts/**/*', ['packjs']);
+  gulp.watch('./src/styles/pages/**/*', ['scss']);
+  gulp.watch('./src/scripts/pages/**/*', ['packjs']);
 });
 
 // 配置 default 任务，执行任务队列
