@@ -1,0 +1,24 @@
+
+@import "../common/common";
+
+header{
+	@include flex();
+	height: 44px;
+	div:first-child, form{
+		@include flexGrow(1);
+	}
+	div:first-child{
+		padding-left: 20px;
+	}
+	form{
+		a:first-child{
+			@include flexGrow(3);
+			background: #111;
+		}
+		a:last-child{
+			@include flexGrow(1);
+			background: #F00;
+		}
+		
+	}
+}

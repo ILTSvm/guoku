@@ -1,0 +1,12 @@
+
+@mixin flex(){
+	display: -webkit-flex; 
+	display: flex;
+}
+@mixin flexCenter{
+	justify-content: center;
+	align-items: center;
+}
+@mixin flexGrow($flexGrow){
+	flex: $flexGrow;
+}
