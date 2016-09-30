@@ -1,5 +1,0 @@
-
-
-require('./views/index.js');
-
-
