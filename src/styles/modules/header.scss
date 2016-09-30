@@ -1,24 +1,32 @@
 
-@import "../common/common";
-
 header{
+	@include flexbox();
 	@include flex();
-	height: 44px;
-	div:first-child, form{
-		@include flexGrow(1);
-	}
-	div:first-child{
-		padding-left: 20px;
+	width: 100%;
+	height: 50px;
+	padding: 0 15px;
+	border-bottom: 1px solid #ccc;
+	background: #FFF;
+	div{
+		@include flexbox();
+		@include flex();
+		@include align-items();
+		img{
+			width: 42px;
+		}
 	}
 	form{
-		a:first-child{
-			@include flexGrow(3);
-			background: #111;
+		@include flexbox();
+		@include flex();
+		@include justify-content(flex-end);
+		@include align-items();
+		input{
+			border: none;
+			width: 22px;
+			height: 16px;
+			padding: 0 10px;
+			margin-right: 15px;
+			background: #666;
 		}
-		a:last-child{
-			@include flexGrow(1);
-			background: #F00;
-		}
-		
 	}
 }

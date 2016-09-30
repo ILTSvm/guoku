@@ -1,0 +1,54 @@
+
+footer{
+	@include flexbox();
+	@include flex();
+	@include flex-direction(column);
+	width: 100%;
+	padding: 20px;
+	background: #212121;
+	color: #9d9e9f;
+	a{
+		color: #9d9e9f;
+		opacity: .6;
+	}
+	.icon-list{
+		@include flexbox(flex);
+		@include flex();
+		@include justify-content(space-around);
+		width: 100%;
+		height: 28px;
+		padding: 0 16px;
+		margin-top: 20px;
+		a{
+			@include border-radius(50%);
+			width: 28px;
+			height: 28px;
+			background: #6c6d6d;
+		}
+	}
+	.about-list{
+		@include flexbox(flex);
+		@include flex();
+		@include flex-wrap(wrap);
+		width: 100%;
+		margin-top: 20px;
+		text-align: center;
+		line-height: 28px;
+		a{
+			width: 25%;
+		}
+	}
+	.footer-bottom{
+		width: 100%;
+		text-align: center;
+		line-height: 28px;
+		margin-top: 10px;
+		color: #9d9e9f;
+		a{
+			color: #9d9e9f;
+			padding-left: 10px;
+		}
+	}
+}
+
+
