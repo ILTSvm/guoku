@@ -1,0 +1,68 @@
+@import "../lib/swiper/swiper";
+#goodsbanner{
+    font-family: "微软雅黑";
+    .swiper-wrapper{
+        padding: 20px;
+        .swiper-slide{
+            @include overflow(hidden);
+            
+            width: auto;
+            .banneritem{
+                color: #000;
+                @include flexbox();
+                @include flex-direction(column);
+                text-align: center;
+                width: 100px;
+                height: 160px;
+                img{
+                    width: 100%;
+                    height: 100px;
+                    margin: 5px 0;
+                }
+                span{
+                    width: 100%;
+                }
+                .banneritemname{
+                    @include ellipsis(100%,2);
+
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+                .banneritemprice{
+                    color: blue;
+                    font-family: "微软雅黑";
+                    font-size: 12px;
+                } 
+            }    
+        } 
+    }
+}
+#banner2{
+    .swiper-slide{
+        .bannerarticle{
+            color: #fff;
+            position: relative;
+            display: block;
+            img{
+
+            }
+            .bannershadow{
+                @include flexbox();
+                @include flex-direction(column);
+                @include justify-content(flex-end);
+                position: absolute;
+                bottom: -50%;
+                width: 100%;
+                height: 50%;
+                @include gradient(linear, top, transparent, rgba(0,0,0,.5));
+                
+                .articletitle{
+                    font: bold 20px/26px "微软雅黑";
+                }
+                .articledesc{
+                    font:  16px/26px "微软雅黑";
+                }
+            }
+        }
+    }
+}
