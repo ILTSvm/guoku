@@ -21,6 +21,4 @@ var common = {
 
 module.exports = common;
 
-
-
 //函数库，后续会补公共类库

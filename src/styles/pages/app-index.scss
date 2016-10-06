@@ -9,10 +9,19 @@
 
 // test header and footer statr
 @import "../modules/header";
+
 @import "../modules/footer";
 @import "../modules/banner";
-// test header and footer end
 
+
+
+
+
+@import "../modules/index_imageText";
+@import "../modules/images_text";
 body{ 
+
     background: #FF0;
 }   
+
+
