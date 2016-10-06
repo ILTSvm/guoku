@@ -5,8 +5,17 @@
 // @import "../fragment/yo-list";
 // @import "../element/yo-badge";
 
+// 引入字体库
+// @import "../iconfont/demo";
+// @import "../iconfont/iconfont";
+
 // 页面所需模块
+@import "../utils/common";
+
+@import "../modules/header";
+@import "../modules/footer";
 @import "../modules/detail";
+
 body{
-    background: #F00;
+    background: #FFF;
 }

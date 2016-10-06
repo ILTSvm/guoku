@@ -1,0 +1,245 @@
+
+#detail{
+	@include flexbox();
+	@include flex();
+	@include flex-direction(column);
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	.detail-info{
+		@include flexbox();
+		@include flex();
+		@include flex-direction(column);
+		width: 100%;
+		padding: 0 .15rem;
+		div:nth-of-type(1){
+			@include flex();
+			@include justify-content();
+			@include align-items();
+			width: 100%;
+			padding: .3rem 0 0;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.proNameEn{
+			@include flex();
+			width: 100%;
+			font-size: .16rem;
+			font-weight: 800;
+		}
+		.proName{
+			@include flex();
+			width: 100%;
+			font-size: .22rem;
+			margin-top: .1rem;
+			line-height: .26rem;
+		}
+		.proPrice{
+			@include flex();
+			width: 100%;
+			font-size: .22rem;
+			font-family: Georgia,serif;
+			color: #5976c1;
+			margin: .2rem 0;
+		}
+		.proStatus{
+			@include flexbox();
+			@include flex();
+			@include justify-content(flex-start);
+			@include align-items(flex-end);
+			width: 100%;
+			color: #9D9E9F;
+			span{
+				margin-right: .2rem;
+				font-size: .14rem;
+				i{
+					margin-right: .04rem;
+					font-size: .14rem;
+				}
+			}
+		}
+		.detail-btn{
+			@include flexbox();
+			@include flex();
+			@include flex-direction(column);
+			width: 100%;
+			&>a{
+				display: block;
+				width: 100%;
+				text-align: center;
+				color: #333;
+				padding: .04rem 0;
+				@include border-radius(.04rem);
+				i{
+					margin-right: .06rem;
+				}
+				&:nth-of-type(1){
+					background: #F8F8F8;
+					margin-bottom: .08rem;
+				}
+				&:nth-of-type(2){
+					background: #6192FF;
+				}
+			}
+			p{
+				@include flexbox();
+				@include flex();
+				@include justify-content(space-between);
+				width: 100%;
+				padding: .1rem;
+				span{
+					color: #212121;
+					font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+					font-size: .16rem;
+					line-height: 1.5;
+				}
+				a{
+					color: #5976c1;
+				}
+			}
+		}
+		.share{
+			@include flexbox();
+			@include flex();
+			@include justify-content(flex-end);
+			width: 100%;
+			margin-top: .3rem;
+			padding-bottom: .06rem;
+			
+			span{
+				padding: .04rem .08rem;
+				margin-left: .03rem;
+				@include border-radius(.05rem);
+				&:nth-child(1){
+					background: #51C332;
+				}
+				&:nth-child(2){
+					background: #E90D24;
+				}
+				&:nth-child(3){
+					background: #3199DD;
+				}
+				i{
+					color: #FFF;
+					font-size: .20rem;
+				}
+			}
+		}
+	}
+	.detail-border{
+		height: 0;
+		width: 100%;
+		border-bottom: .01rem solid #F8F8F8;
+	}
+	.user-comment{
+		@include flexbox();
+		@include flex();
+		@include flex-direction(column);
+		width: 100%;
+		padding: 0 .15rem;
+		.comment-content{
+			@include flexbox();
+			@include flex();
+			width: 100%;
+			.userIcon{
+				@include flex(1);
+				.imgBox{
+					@include border-radius(50%);
+					width: .6rem;
+					height: .6rem;
+					overflow: hidden;
+					img{
+						width: 100%;
+					}
+				}
+			}
+			.commentInfo{
+				@include flex(4);
+				padding-left: .15rem;
+				.userName{
+					@include flexbox();
+					@include justify-content(space-between);
+					width: 100%;
+					color: #5976c1;
+					font-size: .18rem;
+					i{
+						color: #FF9500;
+						font-size: .14rem;
+					}
+				}
+				.comment-text{
+					margin-top: .06rem;
+					line-height: .2rem;
+				}
+				.user-listIcon{
+					@include flexbox();
+					@include flex();
+					width: 100%;
+					text-align: left;
+					font-size: .13rem;
+					color: #9D9E9F;
+					i{
+						font-size: .14rem;
+					}
+					&>i{
+						@include flex(1);
+					}
+					span{
+						@include flex(2);
+						text-align: right;
+					}
+				}
+			}
+		}
+		.commentNow{
+			@include flexbox();
+			@include flex();
+			@include justify-content(flex-end);
+			width: 100%;
+			margin-top: .4rem;
+			a{
+				display: block;
+				min-width: 110px;
+				padding: .06rem .2rem;
+				@include border-radius(.04rem);
+				background-color: #6192FF;
+				color: #fff;
+			}
+		}
+	}
+	.recommendPro{
+		@include flexbox();
+		@include flex();
+		@include flex-direction(column);
+		width: 100%;
+		h3{
+			padding: 0 .15rem;
+		}
+		.recommendPro-list{
+			@include flexbox();
+			@include flex();
+			@include flex-direction(column);
+			width: 100%;
+			background: #F8F8F8;
+			ul{
+				@include flexbox();
+				@include flex();
+				width: 100%;
+				li{
+					@include flex();
+					padding: .08rem .04rem;
+					img{
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	.detail-title{
+		width: 100%;
+		font-size: .18rem;
+		margin: .2rem 0;
+	}
+}
