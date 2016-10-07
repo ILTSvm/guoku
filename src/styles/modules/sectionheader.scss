@@ -1,0 +1,15 @@
+.sectionheader{
+    @include flexbox();
+    @include justify-content(space-between);
+    margin: 15px 0;
+    font: 20px/50px "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+    h2{
+        font-weight: 500;
+        padding-left: 10px;
+    }
+    a{
+        color: #757575;
+        font-size: 14px;
+        padding-right: 10px;
+    }
+}  

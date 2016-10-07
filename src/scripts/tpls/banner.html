@@ -1,0 +1,22 @@
+<script id="bannertpl" type="text/html">
+    <div class="swiper-container" id="{{id}}">
+        <div class="swiper-wrapper">
+            {{each list}}
+                <div class="swiper-slide">{{#$value}}</div>
+            {{/each}}
+        </div>
+        {{if pagination}}
+            <div class="swiper-pagination"></div>
+        {{/if}}
+        {{if button}}
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        {{/if}}
+        {{if scrollbar}}
+            <div class="swiper-scrollbar"></div>
+        {{/if}}
+    </div> 
+    
+        {{#swiper}}
+    
+</script>
