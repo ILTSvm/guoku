@@ -4,7 +4,7 @@ var imageText = require("../tpls/image_text.html");
 var indexImageText = require("../tpls/index_image_text.html");
 var header = require("../tpls/header.html");
 var footer = require("../tpls/footer.html");
-var banner = require("../modules/banner.js")
+var banner = require("../modules/banner-index.js")
 
 $('body').prepend(footer);
 $('body').prepend(banner.banner3);
