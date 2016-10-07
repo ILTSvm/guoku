@@ -5,23 +5,23 @@
 // @import "../fragment/yo-list";
 // @import "../element/yo-badge";
 
-// 页面所需模块  
+// 页面所需模块
 
 // test header and footer statr
 @import "../modules/header";
 
 @import "../modules/footer";
+
 @import "../modules/banner";
+@import "../modules/iconsnav";
 
-
-
-
+@import "../modules/sectionheader";
+ 
+   
 
 @import "../modules/index_imageText";
 @import "../modules/images_text";
-body{ 
-
-    background: #FF0;
-}   
-
-
+body{
+    background: #FFF;
+}
+ 

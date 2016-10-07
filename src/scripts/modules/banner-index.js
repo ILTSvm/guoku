@@ -14,7 +14,7 @@ var banner = {
         ],
         swiper: { speed: 500, autoplay: 3000, loop: true, }
     }),
-           
+
     banner2: (function () {
         $.ajax({
             url: 'http://wlwywlqk.cn/goods/getdata?pageindex=' + Math.floor(Math.random() * 100) + '&pagesize=12',
@@ -34,14 +34,14 @@ var banner = {
                     }
                 };
                 for (var i = 0; i < len; i++) {
-                    tpldata.list[i] = '<a class="banneritem" href="/detail?id=' + goods[i]._id + '"><img src="http://wlwywlqk.cn/img/' + goods[i].piclists[0] + '"><span class="banneritemname">' + goods[i].name + '</span><span class="banneritemprice">￥' + goods[i].price + '</span></a>';
+                    tpldata.list[i] = '<a class="banneritem" href="/pages/detail.html?_id=' + goods[i]._id + '"><img src="http://wlwywlqk.cn/img/' + goods[i].piclists[0] + '"><span class="banneritemname">' + goods[i].name + '</span><span class="banneritemprice">￥' + goods[i].price + '</span></a>';
                 }
                 $('#goodsbanner').html(common.tpl('bannertpl', tpldata));
             }
         });
         return '<div id="goodsbanner"></div>';
     })(),
-    
+
     banner3: common.tpl("bannertpl", {
         id: "banner3",
         list: [

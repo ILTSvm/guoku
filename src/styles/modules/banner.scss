@@ -2,7 +2,7 @@
 #banner2{
     font-family: "微软雅黑";
     .swiper-wrapper{
-        padding: 20px;
+        padding-bottom: 20px;
         .swiper-slide{
             @include overflow(hidden);
             
@@ -38,6 +38,7 @@
     }
 }
 #banner3{
+    margin-top: 20px;
     .swiper-slide{
         .bannerarticle{
             color: #fff;
