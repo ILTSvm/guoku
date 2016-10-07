@@ -1,17 +1,17 @@
-//自定义 @mixin  
+﻿//自定义 @mixin  
 //自定义变量 $...
 
 html,body{
 	height: 100%;
-}
+}    
 ul,li{
 	list-style: none;
 }
-a{
+a{  
 	text-decoration: none;
 	color: #666;
 	font-size: 14px;
-}
+}   
 
 @font-face {font-family: 'iconfont';
     src: url('./iconfonts/iconfont.eot'); /* IE9*/

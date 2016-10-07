@@ -1,0 +1,20 @@
+.iconsnav{
+    ul{
+        @include flexbox();
+        @include flex-flow(wrap);
+        li{
+            width: 16.6%;
+            text-align: center;
+            a{
+              color: rgb(33,33,33);
+              font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+              img{
+                width: 100%;
+              }
+              span{
+
+              }
+            }
+        }
+    }
+}

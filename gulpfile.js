@@ -154,7 +154,7 @@ gulp.task('copy-images', function () {
 gulp.task('watch', function () {
   gulp.watch('./pages/*.html', ['copy-index']);
   gulp.watch('./images/**/*', ['copy-images']);
-  gulp.watch('./src/styles/pages/**/*', ['scss']);
+  gulp.watch('./src/styles/**/*', ['scss']);
   gulp.watch('./src/scripts/**/*', ['packjs']);
 });
 

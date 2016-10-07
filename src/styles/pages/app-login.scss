@@ -5,8 +5,8 @@
 
 @import "../modules/footer";
 body{
-    background-color: #fff;
-}
+    background-color: #fff;     
+} 
 .container{
     font: 16px/20px "微软雅黑";
     @include flexbox();
