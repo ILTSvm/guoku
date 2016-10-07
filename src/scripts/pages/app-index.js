@@ -5,7 +5,7 @@ var header = require("../tpls/header.html");
 var iconsnav = require("../tpls/iconsnav.html");
 var footer = require("../tpls/footer.html");
 var banner = require("../modules/banner-index.js");
-
+var list = require("../tpls/index_list.html");
 var sectionheader = require("../modules/sectionheader.js")
 
 
@@ -19,8 +19,9 @@ $('#container').append(sectionheader.zuixintuwen);
 $('#container').append(indexImageText);
 $('#container').append(banner.banner3);
 $('#container').append(sectionheader.remenshangpin);
+$('#container').append(list);
 $('#container').append(footer);
-
+ 
 
 
 

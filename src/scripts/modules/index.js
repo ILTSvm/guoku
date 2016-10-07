@@ -7,13 +7,16 @@ var str = require('../tpls/index.html');
 var header = require('../tpls/header.html');
 common.render(str);
 common.render(header);
-
-var data = {
+window.onload = function(){
+	var data = {
 	"pageindex":1;
 	"pagesize":10;
-}
-useAjax("http://wlwywlqk.cn/goods/getData",atemp,data);
-function atemp(data){
-	var html = template('w_index_list', data);
-	document.getElementById('list-box').innerHTML = html;
+	}
+	common.useAjax("http://wlwywlqk.cn/goods/getData",atemp,data);
+	
+	function atemp(data){
+		var html = template('w_index_list', data);
+		document.getElementById('list-box').innerHTML = html;
+	}
+
 }
