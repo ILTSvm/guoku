@@ -1,5 +1,5 @@
 var sectionheadertpl = require("../tpls/sectionheader.html");
-$('body').prepend(sectionheadertpl);
+$('body').append(sectionheadertpl);
 var sectionheader = {
   jingxuanshangpin:template("sectionheadertpl",{
     title:'精选商品',
