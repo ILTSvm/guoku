@@ -1,9 +1,7 @@
 
-var header = require("../tpls/header.html");
+var getData = require("../modules/detail.js");
 
-var detailContent = require("../tpls/detail.html")
+var detailScroll = require("../modules/contentScroll.js");
+detailScroll.addFooter("detailIscroll");
+detailScroll.init("detail");
 
-$('body').prepend(detailContent);
-$('body').prepend(header);
-
-var detailScroll = require("../modules/detailContent.js");

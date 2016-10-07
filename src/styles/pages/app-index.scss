@@ -7,21 +7,16 @@
 
 // 页面所需模块  
 
-// test header and footer statr
+@import "../utils/common";
 @import "../modules/header";
 
 @import "../modules/footer";
 @import "../modules/banner";
 
-
-
-
-
 @import "../modules/index_imageText";
 @import "../modules/images_text";
 body{ 
-
-    background: #FF0;
+    background: #FFF;
 }   
 
 
