@@ -24,16 +24,25 @@ $('#container').append(footer);
  
 
 
-
+ 
 
 common.final([{
     url: 'http://wlwywlqk.cn/goods/getdata?pageindex=' + Math.floor(Math.random() * 100) + '&pagesize=12',
     success: banner.initbanner2,
-},],function(){
+},
+	{
+		url: 'http://wlwywlqk.cn/goods/getData?pageindex=1&pagesize=50',
+		success:function(data){
+			var datajson=JSON.parse(data);
+			var html = template('w_index_list', {product:datajson});
+			document.getElementById('list-box').innerHTML = html;
+		}
+	}
+],function(){
     new IScroll('body', { mouseWheel: true, click: true });
 })
 
-
+ 
 
 
 

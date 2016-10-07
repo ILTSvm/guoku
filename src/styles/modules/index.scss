@@ -1,28 +1,30 @@
-.w-nav{
-    @include _flex;
-    .w-navlist{
-        @include _flex;
+
+    #list-box{
+        @include flexbox();
         flex-wrap: wrap;
         flex:1;
         li{
-            width:16%;
+            padding:10px;
+            width:50%;
             height:100%;
-//          @include _flex;
-//          flex-direction: column;
-//          img{
-//              width:100%;
-//          }
-//          p{
-//              flex: 1;
-//              font-size:14px;
-//              width:100%;
-//          }
-//          span{
-//              flex: 1;
-//              font-size:14px;
-//              color:darkgoldenrod;
-//              width:100%;
-//          }
+            @include flexbox();
+            flex-direction: column;
+            @include justify-content(flex-end);
+            img{
+                width:100%;
+                @include align-self(flex-start);
+            }
+            p{
+                flex: 1;
+                font-size:14px;
+                width:100%;
+            }
+            span{
+                flex: 1;
+                font-size:14px;
+                color:darkgoldenrod;
+                width:100%;
+            }
         }
     }
-}
+
