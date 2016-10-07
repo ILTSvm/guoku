@@ -8,10 +8,12 @@ var header = require('../tpls/header.html');
 common.render(str);
 common.render(header);
 
-// $.ajax({
-//   url: '/api/list.php',
-//   success: function (res) {
-//     var html = template('test', res.data);
-//     common.render(html);
-//   }
-// });
+var data = {
+	"pageindex":1;
+	"pagesize":10;
+}
+useAjax("http://wlwywlqk.cn/goods/getData",atemp,data);
+function atemp(data){
+	var html = template('w_index_list', data);
+	document.getElementById('list-box').innerHTML = html;
+}

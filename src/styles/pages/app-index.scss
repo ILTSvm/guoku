@@ -6,7 +6,8 @@
 // @import "../element/yo-badge";
 
 // 页面所需模块
-
+@import "../lib/layout/yo-flex.scss";
+@import "../modules/index";
 // test header and footer statr
 @import "../modules/header";
 // @import "../modules/footer";
@@ -15,6 +16,7 @@
 
 // @import "../modules/index_imageText";
 @import "../modules/images_text";
+
 body{ 
     // background: #FF0;
 }

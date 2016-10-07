@@ -1,0 +1,28 @@
+.w-nav{
+    @include _flex;
+    .w-navlist{
+        @include _flex;
+        flex-wrap: wrap;
+        flex:1;
+        li{
+            width:16%;
+            height:100%;
+//          @include _flex;
+//          flex-direction: column;
+//          img{
+//              width:100%;
+//          }
+//          p{
+//              flex: 1;
+//              font-size:14px;
+//              width:100%;
+//          }
+//          span{
+//              flex: 1;
+//              font-size:14px;
+//              color:darkgoldenrod;
+//              width:100%;
+//          }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+
+<!--<ul id = "list-box">
+	<li>
+		<img src = "../../../images/1.png">
+	</li>
+</ul>-->
+<h2>热门商品</h2>
+<ul id = "list-box">
+</ul>
+<script id="w_index_list" type="text/html">
+   {{each products as product i}}
+       <li>
+           <img src="http://wlwywlqk.cn/img/"+"{{product.piclists[0]}}" data-imgname="{{product.piclists[0]}}">
+           <p class="w_pname">{{product.name}}</p>
+           <span class="w_price">{{product.price}}</span>
+       </li>
+   {{/each}}
+</script>

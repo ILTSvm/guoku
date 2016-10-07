@@ -152,7 +152,7 @@ gulp.task('watch', function () {
   gulp.watch('./pages/*.html', ['copy-index']);
   gulp.watch('./images/**/*', ['copy-images']);
   gulp.watch('./src/styles/pages/**/*', ['scss']);
-  gulp.watch('./src/scripts/pages/**/*', ['packjs']);
+  gulp.watch('./src/scripts/**/*', ['packjs']);
 });
 
 // 配置 default 任务，执行任务队列
