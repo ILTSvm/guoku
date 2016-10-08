@@ -17,7 +17,7 @@
 		    .curA{
 		    	background: #f1f1f1;
 		    }
-			a{
+			a{ 
 				@include border-radius(.100rem);
 				display: block;
 				height: .22rem;

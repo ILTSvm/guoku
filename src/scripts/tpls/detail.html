@@ -1,8 +1,15 @@
 <script id="test" type="text/html">
 	<div id="detail">
 		<div id="detailIscroll">
+			<div class="swiper-container">
+					<div class="swiper-wrapper">
+						{{each piclists}}
+							<div class="swiper-slide"><img width="100vw" height="100vw" src="http://wlwywlqk.cn/img/{{$value}}" alt=""></div>
+						{{/each}}
+					</div>
+					<div class="swiper-pagination"></div>
+			</div>
 			<div class="detail-info">
-				<div><img src="/images/detailImg.jpg" alt=""></div>
 				<p class="proNameEn">{{nameEn}}</p>
 				<h3 class="proName">{{name}}</h3>
 				<p class="proPrice">{{price}}</p>
@@ -19,7 +26,7 @@
 					<span><i class="icon iconfont">&#x3488;</i></span>
 					<span><i class="icon iconfont">&#xe60a;</i></span>
 					<span><i class="icon iconfont">&#x3488;</i></span>
-				</div>
+				</div> 
 			</div>
 			<div class="detail-border"></div>
 			<div class="user-comment">

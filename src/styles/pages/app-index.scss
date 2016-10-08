@@ -7,7 +7,12 @@
 
 // 页面所需模块
 
+@import "../lib/layout/yo-flex.scss";
+@import "../modules/index";
 @import "../utils/common";
+
+@import "../modules/sectionheader";
+@import "../modules/iconsnav";
 @import "../modules/header";
 
 @import "../modules/footer";
@@ -16,6 +21,7 @@
 
 @import "../modules/index_imageText";
 @import "../modules/images_text";
+
 body{ 
     background: #FFF;
 }   
