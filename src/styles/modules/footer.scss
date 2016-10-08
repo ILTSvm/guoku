@@ -4,8 +4,9 @@ footer{
 	@include flex();
 	@include flex-direction(column);
 	width: 100%;
-	padding: 20px;
+	padding: .20rem;
 	background: #212121;
+
 	color: #9d9e9f;
 	a{
 		color: #9d9e9f;
@@ -16,14 +17,20 @@ footer{
 		@include flex();
 		@include justify-content(space-around);
 		width: 100%;
-		height: 28px;
-		padding: 0 16px;
-		margin-top: 20px;
+		height: .28rem;
+		padding: 0 .16rem;
+		margin-top: .20rem;
 		a{
 			@include border-radius(50%);
-			width: 28px;
-			height: 28px;
+			width: .28rem;
+			height: .28rem;
+			line-height: .28rem;
 			background: #6c6d6d;
+			text-align: center;
+			i{
+				color: #000;
+				font-size: .16rem;
+			}
 		}
 	}
 	.about-list{
@@ -31,9 +38,9 @@ footer{
 		@include flex();
 		@include flex-wrap(wrap);
 		width: 100%;
-		margin-top: 20px;
+		margin-top: .20rem;
 		text-align: center;
-		line-height: 28px;
+		line-height: .28rem;
 		a{
 			width: 25%;
 		}
@@ -41,12 +48,12 @@ footer{
 	.footer-bottom{
 		width: 100%;
 		text-align: center;
-		line-height: 28px;
-		margin-top: 10px;
+		line-height: .28rem;
+		margin-top: .10rem;
 		color: #9d9e9f;
 		a{
 			color: #9d9e9f;
-			padding-left: 10px;
+			padding-left: .10rem;
 		}
 	}
 }

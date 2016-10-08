@@ -1,12 +1,21 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 @import "../usage/core/reset";
 // @import "../layout/yo-flex";
 // @import "../../lib/fragment/yo-header";
-// @import "../fragment/yo-list";
+// @import "../fragment/yo-list"; 
 // @import "../element/yo-badge";
 
+// 引入字体库
+// @import "../iconfont/demo";
+// @import "../iconfont/iconfont";
+
 // 页面所需模块
+@import "../utils/common";
+
+@import "../modules/header";
+@import "../modules/footer";
 @import "../modules/detail";
+
 body{
-    background: #F00;
+    background: #FFF;
 }

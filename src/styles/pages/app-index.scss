@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 @import "../usage/core/reset";
 // @import "../layout/yo-flex";
 // @import "../../lib/fragment/yo-header";
@@ -7,11 +7,24 @@
 
 // 页面所需模块
 
-// test header and footer statr
-// @import "../modules/header";
-// @import "../modules/footer";
-// test header and footer end
+@import "../lib/layout/yo-flex.scss";
+@import "../modules/index";
+@import "../utils/common";
 
-body{
-    background: #FF0;
-}
+@import "../modules/sectionheader";
+@import "../modules/iconsnav";
+@import "../modules/header";
+
+@import "../modules/footer";
+
+@import "../modules/banner";
+
+@import "../modules/index_imageText";
+@import "../modules/images_text";
+
+body{ 
+    background: #FFF;
+}   
+
+
+

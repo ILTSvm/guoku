@@ -1,3 +1,5 @@
+.vscode/
 node_modules/
-build/
+node/
+images/img/
 .ignore.*

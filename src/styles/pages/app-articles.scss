@@ -6,7 +6,10 @@
 // @import "../element/yo-badge";
 
 // 页面所需模块
+@import "../utils/common";
+@import "../modules/header";
 @import "../modules/articles";
+@import "../modules/footer";
 body{
-    background: #F00;
+    background: #FFF;
 }
