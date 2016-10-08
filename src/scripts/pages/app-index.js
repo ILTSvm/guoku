@@ -8,8 +8,6 @@ var banner = require("../modules/banner-index.js");
 
 var sectionheader = require("../modules/sectionheader.js")
 
-
-
 $('#container').append(header);
 $('#container').append(banner.banner1);
 $('#container').append(iconsnav);
@@ -21,20 +19,12 @@ $('#container').append(banner.banner3);
 $('#container').append(sectionheader.remenshangpin);
 $('#container').append(footer);
 
-
-
-
-
 common.final([{
     url: 'http://wlwywlqk.cn/goods/getdata?pageindex=' + Math.floor(Math.random() * 100) + '&pagesize=12',
     success: banner.initbanner2,
 },],function(){
     new IScroll('body', { mouseWheel: true, click: true });
 })
-
-
-
-
 
 var headerAnimate = require("../modules/header.js")
 
