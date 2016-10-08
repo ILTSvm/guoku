@@ -7,6 +7,11 @@
 
 // 页面所需模块
 @import "../modules/categorygroup";
+@import "../modules/header";
+@import "../modules/footer";
+@import "../lib/layout/yo-flex.scss";
+@import "../modules/index";
+@import "../utils/common";
 body{
-    background: #F00;
+    background: #fff ;
 }
