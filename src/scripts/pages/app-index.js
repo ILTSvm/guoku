@@ -22,9 +22,9 @@ $('#container').append(sectionheader.remenshangpin);
 $('#container').append(footer);
 
 
+ 
 
-
-
+ 
 common.final([{
     url: 'http://wlwywlqk.cn/goods/getdata?pageindex=' + Math.floor(Math.random() * 100) + '&pagesize=12',
     success: banner.initbanner2,
