@@ -10340,9 +10340,9 @@
 	$('#container').append(footer);
 
 	if(common.GetRequest("categorygroup")){
-		var _url = 'http://wlwywlqk.cn/goods/getData?categorygroup='+common.GetRequest("categorygroup");
+		var _url = 'http://wlwywlqk.cn/goods/getData?categorygroup='+common.GetRequest("categorygroup")+"&pageindex=1&pagesize=100";
 	}else{
-		var _url = 'http://wlwywlqk.cn/goods/getData?pageindex=1&pagesize=50';
+		var _url = 'http://wlwywlqk.cn/goods/getData?pageindex=1&pagesize=100';
 	}
 
 	common.final(
