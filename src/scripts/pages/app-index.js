@@ -8,8 +8,6 @@ var banner = require("../modules/banner-index.js");
 var list = require("../tpls/index_list.html");
 var sectionheader = require("../modules/sectionheader.js")
 
-
-
 $('#container').append(header);
 $('#container').append(banner.banner1);
 $('#container').append(iconsnav);
@@ -22,10 +20,6 @@ $('#container').append(sectionheader.remenshangpin);
 $('#container').append(list);
 $('#container').append(footer);
  
-
-
- 
-
 common.final([{
     url: 'http://wlwywlqk.cn/goods/getdata?pageindex=' + Math.floor(Math.random() * 100) + '&pagesize=12',
     success: banner.initbanner2,
@@ -44,7 +38,6 @@ common.final([{
 })
 
  
-
 
 
 var headerAnimate = require("../modules/header.js");

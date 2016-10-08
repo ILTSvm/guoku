@@ -12607,6 +12607,7 @@
 
 	var detailScroll = __webpack_require__(6);
 	detailScroll.addFooter("detailIscroll");
+
 	detailScroll.init("detail");
 
 
@@ -12642,6 +12643,7 @@
 	var common = __webpack_require__(11);
 	var Request = new Object();
 	Request.id = common.GetRequest("_id"); 
+
 	if(!Request.id){
 		Request.id = "57ed08be22673b1d8c950e07";
 	}
