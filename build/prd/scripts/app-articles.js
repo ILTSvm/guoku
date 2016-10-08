@@ -44,18 +44,46 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(13);
+	module.exports = __webpack_require__(1);
 
 
 /***/ },
-/* 1 */,
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*** IMPORTS FROM imports-loader ***/
+	var define = false;
+
+
+
+	var header = __webpack_require__(2);
+
+	var articlesContent = __webpack_require__(3)
+
+	$('body').prepend(articlesContent);
+	$('body').prepend(header);
+
+	var headerAnimate = __webpack_require__(4)
+	var articleScroll = __webpack_require__(6);
+
+	articleScroll.addFooter("img-container");
+	articleScroll.init("article");
+
+
+
+/***/ },
 /* 2 */
 /***/ function(module, exports) {
 
 	module.exports = "<header>	<div class=\"basicHeader\">		<div><img src=\"/images/top_search_logo.png\" alt=\"\"></div>		<form>			<!-- <input id=\"searchTxt\" type=\"text\" /> -->			<a id=\"searchBtn\" href=\"#\"><i class=\"icon iconfont\">&#xe606;</i></a>			<a id=\"header-listbar\" href=\"#\"><i class=\"icon iconfont\">&#x3557;</i></a>		</form>	</div>	<ul>		<li><a href=\"./index.html\">首页</a></li>		<li><a href=\"./articles.html\">图文</a></li>		<li><a href=\"./categorygroup.html\">专题</a></li>	</ul>	<ul>		<li><a href=\"./categorygroup.html\">好店</a></li>		<li><a href=\"./login.html\">登录</a></li>		<li><a href=\"./register.html\">注册</a></li>	</ul></header>"
 
 /***/ },
-/* 3 */,
+/* 3 */
+/***/ function(module, exports) {
+
+	module.exports = "<div id=\"article\">	<div id=\"img-container\">		<div class=\"article-content\">			<nav>				<a class=\"curA\" href=\"#\">全部</a>				<a href=\"#\">专访</a>				<a href=\"#\">设计</a>				<a href=\"#\">文具</a>				<a href=\"#\">护肤</a>				<a href=\"#\">饮食</a>			</nav>			<section class=\"content\">				<ul>					<li>						<a href=\"#\"><img src=\"/images/image_text2.jpeg\" alt=\"\"></a>						<p><a href=\"#\">去年最棒的平面设计都在这里，来看看这个榜单</a></p>						<p>		                    又一年过去了，在过去的一年里，平面设计师们孜孜不倦地丰富着我们的视觉世界。最近，itsnicethat网站评选出了&nb...		                </p>		                <p><span>13小时前</span></p>					</li>					<li>						<a href=\"#\"><img src=\"/images/image_text.jpeg\" alt=\"\"></a>						<p><a href=\"#\">去年最棒的平面设计都在这里，来看看这个榜单</a></p>						<p>		                    又一年过去了，在过去的一年里，平面设计师们孜孜不倦地丰富着我们的视觉世界。最近，itsnicethat网站评选出了&nb...		                </p>		                <p><span>昨天</span></p>					</li>					<li>						<a href=\"#\"><img src=\"/images/image_text3.jpeg\" alt=\"\"></a>						<p><a href=\"#\">去年最棒的平面设计都在这里，来看看这个榜单</a></p>						<p>		                    又一年过去了，在过去的一年里，平面设计师们孜孜不倦地丰富着我们的视觉世界。最近，itsnicethat网站评选出了&nb...		                </p>		                <p><span>昨天</span></p>					</li>				</ul>			</section>		</div>	</div></div>"
+
+/***/ },
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -12505,251 +12533,6 @@
 /***/ function(module, exports) {
 
 	module.exports = "<footer>	<div class=\"icon-list\">		<a href=\"#\"><i class=\"icon iconfont\">&#x3488;</i></a>		<a href=\"#\"><i class=\"icon iconfont\">&#xe60a;</i></a>		<a href=\"#\"><i class=\"icon iconfont\">&#xf0082;</i></a>		<a href=\"#\"><i class=\"icon iconfont\">&#xe634;</i></a>		<a href=\"#\"><i class=\"icon iconfont\">&#xe616;</i></a>		<a href=\"#\"><i class=\"icon iconfont\">&#xe659;</i></a>	</div>	<div class=\"about-list\">		<a href=\"#\">关于果库</a>		<a href=\"#\">应用下载</a>		<a href=\"#\">协议</a>		<a href=\"#\">工作机会</a>		<a href=\"#\">常见问题</a>		<a href=\"#\">应用反馈</a>		<a href=\"#\">友情链接</a>		<a href=\"#\">果库合作</a>	</div>	<div class=\"footer-bottom\">		<p>&copy;2016果库<a href=\"#\">京ICP备14054029号</a></p>		<p>京公网安备11010502019958</p>	</div></footer>"
-
-/***/ },
-/* 9 */,
-/* 10 */,
-/* 11 */
-/***/ function(module, exports) {
-
-	/*** IMPORTS FROM imports-loader ***/
-	var define = false;
-
-	var common = {
-	  render: function (str) {
-	    $('body').prepend(str);
-	  },
-	  tpl: function (id, data) {
-	    if (data.swiper) {
-	      var swiperjs = '<script> new Swiper("#' + data.id + '", {'
-	      for (var key in data.swiper) {
-	        if (typeof data.swiper[key] === 'string') {
-	          swiperjs += key + ':"' + data.swiper[key].toString() + '",';
-	        } else {
-	          swiperjs += key + ':' + data.swiper[key].toString() + ',';
-	        }
-	      }
-	      swiperjs += '})</script> ';
-	      data.swiper = swiperjs;
-	    }
-	    return template(id, data);
-	  },
-	  final: function (arr, final) {
-	    var len = arr.length;
-	    var count = len + 1;
-	    window.onload = function () {
-	      if (--count == 0) {
-	        final.apply(this, Array.prototype.slice.call(arguments, 2));
-	      }
-	    }
-	    for (var i = 0; i < len; i++) {
-	      (function (ii) {
-	        var success = arr[ii].success;
-	        arr[ii].success = function (data) {
-	          success(data);
-	          if (--count == 0) {
-	            final.apply(this, Array.prototype.slice.call(arguments, 2));
-	          }
-	        }
-	      })(i);
-	      $.ajax(arr[i]);
-	    }
-	  },
-	  useAjax:function(url,callback,dataJson){
-	        $.ajax({
-	            url:url,
-	            data:dataJson,
-	            success:function(data) {
-	                console.log(data);
-	                callback(data);
-	            },
-	            error:function(){
-	                alert("ajax error");
-	            },
-	            //data  array,
-	            dataType:"json",
-	            type:"post"
-	        })
-	   },
-	  GetRequest:function(_str) {
-	        var url = location.search;//获取url中"?"符后的字串
-	        if (url.indexOf("?") != -1) {//判断是否有参数
-	            var str = url.substr(1);// 从第一个字符开始 因为第0个是?号 获取所有除问号的所有符串
-	            strs = str.split("=");// 用等号进行分隔 （因为知道只有一个参数 所以直接用等号进分隔 如果有多个参数 要用&号分隔 再用等号进行分隔）
-	            if(strs[0]==_str){
-	                return strs[1];
-	            }else{
-	            	  console.log(_str);
-	            	  console.log(strs[0]);
-	                return false;
-	            }
-	            // 直接弹出第一个参数 （如果有多个参数 还要进行循环的;
-	        }
-	    }
-	};
-
-	module.exports = common;
-
-
-	//函数库，后续会补公共类库
-
-
-/***/ },
-/* 12 */,
-/* 13 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/*** IMPORTS FROM imports-loader ***/
-	var define = false;
-
-
-	var getData = __webpack_require__(14);
-
-	var detailScroll = __webpack_require__(6);
-	detailScroll.addFooter("detailIscroll");
-
-	detailScroll.init("detail");
-
-
-
-
-/***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/*** IMPORTS FROM imports-loader ***/
-	var define = false;
-
-
-	//获取地址栏的数据
-	//function UrlSearch()
-	//{
-	//  var name,value;
-	//  var str=location.href; //取得整个地址栏
-	//  var num=str.indexOf("?")
-	//  str=str.substr(num+1); //取得所有参数   stringvar.substr(start [, length ]
-	//
-	//  var arr=str.split("&"); //各个参数放到数组里
-	//  for(var i=0;i < arr.length;i++){
-	//      num=arr[i].indexOf("=");
-	//      if(num>0){
-	//          name=arr[i].substring(0,num);
-	//          value=arr[i].substr(num+1);
-	//          this[name]=value;
-	//      }
-	//  }
-	//}
-	//var Request = new UrlSearch(); //实例化
-	var common = __webpack_require__(11);
-	var Request = new Object();
-	Request.id = common.GetRequest("_id"); 
-
-	if(!Request.id){
-		Request.id = "57ed08be22673b1d8c950e07";
-	}
-	var header = __webpack_require__(2);
-	var footer = __webpack_require__(8);
-	var detailContent = __webpack_require__(15);
-	var bannertpl = __webpack_require__(16);
-	$('body').append(bannertpl);
-	var detailGroupData = __webpack_require__(17)
-	$('body').prepend(detailContent);
-	$('body').prepend(detailGroupData);
-
-	var url = "http://wlwywlqk.cn/goods/getData?_id="+Request.id;
-
-	// 请求商品数据
-	function getAjax(url, fn){
-		$.ajax({
-			url: url,
-			success: function(req){
-				
-				fn(JSON.parse(req));
-			},
-			error: function(){
-				console.log("ajax error");
-			}
-		});
-	}
-	getAjax(url, showData);
-
-	// 处理商品数据
-	function showData(data){
-		console.log(data[0]);
-		getGroupPro(data[0].categorygroup);
-		findNameEn(data);
-		var html = template('test', data[0]);
-		$('body').prepend(html);
-		$('#detailIscroll').append(footer);
-		$('body').prepend(header);
-		var headerAnimate = __webpack_require__(4);
-		new Swiper('.swiper-container',{
-			pagination:'.swiper-pagination',
-		});
-	}
-
-
-	// 处理商品名称
-	function findNameEn(data){
-		if((data[0].name[0]>'A'&&data[0].name[0]<'Z')||(data[0].name[0]>'a'&&data[0].name[0]<'z')){
-			data[0].nameEn = data[0].name.match(/[a-zA-Z]/g).join("");
-		}else{
-			data[0].nameEn = "Hot";
-		}
-
-		data[0].name = data[0].name.match(/[\u4e00-\u9fa5]/g).join("");
-	}
-	// 请求相关商品信息
-	function getGroupPro(gropPro){
-		var pageIndex = Math.ceil(Math.random()*2);
-		var pageIndex = 1;
-		var url = "http://wlwywlqk.cn/goods/search?search="+gropPro+"&pageindex="+pageIndex+"&pagesize=9";
-		getAjax(url, showGroupData);
-	}
-
-	// 处理相关商品信息
-	function showGroupData(data){
-		var obj = {};
-		obj.arr1 = [];
-		obj.arr2 = [];
-		obj.arr3 = [];
-		var str = "http://wlwywlqk.cn/img/";
-		var arr = obj.arr1;
-		var j = 0;
-		for(var i=0; i<9; i++){
-			if(i == 3){
-				arr = obj.arr2;
-				j = 0;
-			}else if(i == 6){
-				arr = obj.arr3;
-				j = 0;
-			}
-			arr[j] = str+data[i].piclists[0];
-			j++;
-		}
-		var html = template('showGroupData', obj);
-		$('.recommendPro').eq(0).append(html);
-		
-	}
-
-
-/***/ },
-/* 15 */
-/***/ function(module, exports) {
-
-	module.exports = "<script id=\"test\" type=\"text/html\">	<div id=\"detail\">		<div id=\"detailIscroll\">			<div class=\"swiper-container\">					<div class=\"swiper-wrapper\">						{{each piclists}}							<div class=\"swiper-slide\"><img width=\"100vw\" height=\"100vw\" src=\"http://wlwywlqk.cn/img/{{$value}}\" alt=\"\"></div>						{{/each}}					</div>					<div class=\"swiper-pagination\"></div>			</div>			<div class=\"detail-info\">				<p class=\"proNameEn\">{{nameEn}}</p>				<h3 class=\"proName\">{{name}}</h3>				<p class=\"proPrice\">{{price}}</p>				<p class=\"proStatus\">					<span><i class=\"icon iconfont\">&#xe640;</i>8</span>					<span><i class=\"icon iconfont\">&#xe617;</i>1</span>				</p>				<div class=\"detail-btn\">					<a class=\"love\" href=\"#\"><i class=\"icon iconfont\">&#xe640;</i>喜爱</a>					<a class=\"buyPro\" href=\"#\"><i class=\"icon iconfont\">&#xe640;</i>购买</a>					<p><span>8人喜爱</span><a class=\"more\" href=\"#\">&gt;&gt;</a></p>				</div>				<div class=\"share\">					<span><i class=\"icon iconfont\">&#x3488;</i></span>					<span><i class=\"icon iconfont\">&#xe60a;</i></span>					<span><i class=\"icon iconfont\">&#x3488;</i></span>				</div> 			</div>			<div class=\"detail-border\"></div>			<div class=\"user-comment\">				<h3 class=\"detail-title\">用户点评</h3>				<div class=\"comment-content\">					<div class=\"userIcon\">						<div class=\"imgBox\">							<img src=\"/images/userIcon.jpg\" alt=\"\">						</div>					</div>					<div class=\"commentInfo\">						<p class=\"userName\">							<span>pandakk</span>							<i class=\"icon iconfont\">&#xe616;</i>						</p>						<p class=\"comment-text\">{{comment}}</p>						<p class=\"user-listIcon\">							<i class=\"icon iconfont\">&#xe607;</i>							<i class=\"icon iconfont\">&#xe60e;</i>							<span><i class=\"icon iconfont\">&#xe62d;</i>{{comment_time}}</span>						</p>					</div>				</div>				<div class=\"commentNow\">					<a href=\"#\">我来点评&gt;&gt;</a>				</div>			</div>			<div class=\"recommendPro\">				<h3 class=\"detail-title\">相似推荐</h3>			</div>		</div>	</div></script>"
-
-/***/ },
-/* 16 */
-/***/ function(module, exports) {
-
-	module.exports = "<script id=\"bannertpl\" type=\"text/html\">    <div class=\"swiper-container\" id=\"{{id}}\">        <div class=\"swiper-wrapper\">            {{each list}}                <div class=\"swiper-slide\">{{#$value}}</div>            {{/each}}        </div>        {{if pagination}}            <div class=\"swiper-pagination\"></div>        {{/if}}        {{if button}}            <div class=\"swiper-button-prev\"></div>            <div class=\"swiper-button-next\"></div>        {{/if}}        {{if scrollbar}}            <div class=\"swiper-scrollbar\"></div>        {{/if}}    </div>             {{#swiper}}    </script>"
-
-/***/ },
-/* 17 */
-/***/ function(module, exports) {
-
-	module.exports = "<script id=\"showGroupData\" type=\"text/html\">	<div class=\"recommendPro-list\">		<ul>			{{each arr1 as value i}}			    <!-- <li>索引 {{i + 1}} ：{{value}}</li> -->			    <li><a href=\"./detail.html?_id={{value._id}}\"><img src=\"{{value}}\" alt=\"\"></a></li>			{{/each}}			<!-- <li><a href=\"#\"><img src=\"/images/recommendImg.jpg\" alt=\"\"></a></li>			<li><a href=\"#\"><img src=\"/images/recommendImg.jpg\" alt=\"\"></a></li>			<li><a href=\"#\"><img src=\"/images/recommendImg.jpg\" alt=\"\"></a></li> -->		</ul>		<ul>			{{each arr2 as value i}}			    <li><a href=\"#\"><img src=\"{{value}}\" alt=\"\"></a></li>			{{/each}}		</ul>		<ul>			{{each arr3 as value i}}			    <li><a href=\"#\"><img src=\"{{value}}\" alt=\"\"></a></li>			{{/each}}		</ul>	</div></script> "
 
 /***/ }
 /******/ ]);
