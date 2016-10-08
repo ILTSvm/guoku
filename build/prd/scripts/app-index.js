@@ -10435,8 +10435,6 @@
 	var list = __webpack_require__(23);
 	var sectionheader = __webpack_require__(24)
 
-
-
 	$('#container').append(header);
 	$('#container').append(banner.banner1);
 	$('#container').append(iconsnav);
@@ -10449,10 +10447,6 @@
 	$('#container').append(list);
 	$('#container').append(footer);
 	 
-
-
-	 
-
 	common.final([{
 	    url: 'http://wlwywlqk.cn/goods/getdata?pageindex=' + Math.floor(Math.random() * 100) + '&pagesize=12',
 	    success: banner.initbanner2,
@@ -10471,7 +10465,6 @@
 	})
 
 	 
-
 
 
 	var headerAnimate = __webpack_require__(4);
