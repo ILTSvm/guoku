@@ -1,7 +1,7 @@
 var header = require("../tpls/header.html");
 var footer = require("../tpls/footer.html");
 var register = require("../tpls/register.html");
-
+var headerAnimate = require("../modules/header.js");
 
 $('body').prepend(footer);
 $('body').prepend(register);
@@ -42,3 +42,5 @@ $('.registerform').submit(function () {
     };
     
 });
+
+var headerAnimate = require("../modules/header.js");

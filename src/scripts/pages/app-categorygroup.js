@@ -11,7 +11,7 @@ if(common.GetRequest("categorygroup")){
 }else{
 	var _url = 'http://wlwywlqk.cn/goods/getData?pageindex=1&pagesize=100';
 }
-
+ 
 common.final(
 [
 	{
@@ -27,7 +27,7 @@ common.final(
 })
 
  
-
+ 
 
 
 var headerAnimate = require("../modules/header.js");

@@ -21,12 +21,15 @@
 var common = require("../utils/common.util.js");
 var Request = new Object();
 Request.id = common.GetRequest("_id"); 
+
 if(!Request.id){
 	Request.id = "57ed08be22673b1d8c950e07";
 }
 var header = require("../tpls/header.html");
 var footer = require("../tpls/footer.html");
-var detailContent = require("../tpls/detail.html")
+var detailContent = require("../tpls/detail.html");
+var bannertpl = require("../tpls/banner.html");
+$('body').append(bannertpl);
 var detailGroupData = require("../tpls/detail_groupPro.html")
 $('body').prepend(detailContent);
 $('body').prepend(detailGroupData);
@@ -57,8 +60,13 @@ function showData(data){
 	$('body').prepend(html);
 	$('#detailIscroll').append(footer);
 	$('body').prepend(header);
-	var headerAnimate = require("../modules/header.js")
+	var headerAnimate = require("../modules/header.js");
+	new Swiper('.swiper-container',{
+		pagination:'.swiper-pagination',
+	});
 }
+
+
 // 处理商品名称
 function findNameEn(data){
 	if((data[0].name[0]>'A'&&data[0].name[0]<'Z')||(data[0].name[0]>'a'&&data[0].name[0]<'z')){
@@ -99,4 +107,5 @@ function showGroupData(data){
 	}
 	var html = template('showGroupData', obj);
 	$('.recommendPro').eq(0).append(html);
+	
 }

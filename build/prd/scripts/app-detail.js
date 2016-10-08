@@ -12607,6 +12607,7 @@
 
 	var detailScroll = __webpack_require__(6);
 	detailScroll.addFooter("detailIscroll");
+
 	detailScroll.init("detail");
 
 
@@ -12642,13 +12643,16 @@
 	var common = __webpack_require__(11);
 	var Request = new Object();
 	Request.id = common.GetRequest("_id"); 
+
 	if(!Request.id){
 		Request.id = "57ed08be22673b1d8c950e07";
 	}
 	var header = __webpack_require__(2);
 	var footer = __webpack_require__(8);
-	var detailContent = __webpack_require__(15)
-	var detailGroupData = __webpack_require__(16)
+	var detailContent = __webpack_require__(15);
+	var bannertpl = __webpack_require__(16);
+	$('body').append(bannertpl);
+	var detailGroupData = __webpack_require__(17)
 	$('body').prepend(detailContent);
 	$('body').prepend(detailGroupData);
 
@@ -12678,8 +12682,13 @@
 		$('body').prepend(html);
 		$('#detailIscroll').append(footer);
 		$('body').prepend(header);
-		var headerAnimate = __webpack_require__(4)
+		var headerAnimate = __webpack_require__(4);
+		new Swiper('.swiper-container',{
+			pagination:'.swiper-pagination',
+		});
 	}
+
+
 	// 处理商品名称
 	function findNameEn(data){
 		if((data[0].name[0]>'A'&&data[0].name[0]<'Z')||(data[0].name[0]>'a'&&data[0].name[0]<'z')){
@@ -12720,6 +12729,7 @@
 		}
 		var html = template('showGroupData', obj);
 		$('.recommendPro').eq(0).append(html);
+		
 	}
 
 
@@ -12727,13 +12737,19 @@
 /* 15 */
 /***/ function(module, exports) {
 
-	module.exports = "<script id=\"test\" type=\"text/html\">	<div id=\"detail\">		<div id=\"detailIscroll\">			<div class=\"detail-info\">				<div><img src=\"http://wlwywlqk.cn/img/{{piclists[0]}}\" alt=\"\"></div>				<p class=\"proNameEn\">{{nameEn}}</p>				<h3 class=\"proName\">{{name}}</h3>				<p class=\"proPrice\">{{price}}</p>				<p class=\"proStatus\">					<span><i class=\"icon iconfont\">&#xe640;</i>8</span>					<span><i class=\"icon iconfont\">&#xe617;</i>1</span>				</p>				<div class=\"detail-btn\">					<a class=\"love\" href=\"#\"><i class=\"icon iconfont\">&#xe640;</i>喜爱</a>					<a class=\"buyPro\" href=\"#\"><i class=\"icon iconfont\">&#xe640;</i>购买</a>					<p><span>8人喜爱</span><a class=\"more\" href=\"#\">&gt;&gt;</a></p>				</div>				<div class=\"share\">					<span><i class=\"icon iconfont\">&#x3488;</i></span>					<span><i class=\"icon iconfont\">&#xe60a;</i></span>					<span><i class=\"icon iconfont\">&#x3488;</i></span>				</div> 			</div>			<div class=\"detail-border\"></div>			<div class=\"user-comment\">				<h3 class=\"detail-title\">用户点评</h3>				<div class=\"comment-content\">					<div class=\"userIcon\">						<div class=\"imgBox\">							<img src=\"/images/userIcon.jpg\" alt=\"\">						</div>					</div>					<div class=\"commentInfo\">						<p class=\"userName\">							<span>pandakk</span>							<i class=\"icon iconfont\">&#xe616;</i>						</p>						<p class=\"comment-text\">{{comment}}</p>						<p class=\"user-listIcon\">							<i class=\"icon iconfont\">&#xe607;</i>							<i class=\"icon iconfont\">&#xe60e;</i>							<span><i class=\"icon iconfont\">&#xe62d;</i>{{comment_time}}</span>						</p>					</div>				</div>				<div class=\"commentNow\">					<a href=\"#\">我来点评&gt;&gt;</a>				</div>			</div>			<div class=\"recommendPro\">				<h3 class=\"detail-title\">相似推荐</h3>			</div>		</div>	</div></script>"
+	module.exports = "<script id=\"test\" type=\"text/html\">	<div id=\"detail\">		<div id=\"detailIscroll\">			<div class=\"swiper-container\">					<div class=\"swiper-wrapper\">						{{each piclists}}							<div class=\"swiper-slide\"><img width=\"100vw\" height=\"100vw\" src=\"http://wlwywlqk.cn/img/{{$value}}\" alt=\"\"></div>						{{/each}}					</div>					<div class=\"swiper-pagination\"></div>			</div>			<div class=\"detail-info\">				<p class=\"proNameEn\">{{nameEn}}</p>				<h3 class=\"proName\">{{name}}</h3>				<p class=\"proPrice\">{{price}}</p>				<p class=\"proStatus\">					<span><i class=\"icon iconfont\">&#xe640;</i>8</span>					<span><i class=\"icon iconfont\">&#xe617;</i>1</span>				</p>				<div class=\"detail-btn\">					<a class=\"love\" href=\"#\"><i class=\"icon iconfont\">&#xe640;</i>喜爱</a>					<a class=\"buyPro\" href=\"#\"><i class=\"icon iconfont\">&#xe640;</i>购买</a>					<p><span>8人喜爱</span><a class=\"more\" href=\"#\">&gt;&gt;</a></p>				</div>				<div class=\"share\">					<span><i class=\"icon iconfont\">&#x3488;</i></span>					<span><i class=\"icon iconfont\">&#xe60a;</i></span>					<span><i class=\"icon iconfont\">&#x3488;</i></span>				</div> 			</div>			<div class=\"detail-border\"></div>			<div class=\"user-comment\">				<h3 class=\"detail-title\">用户点评</h3>				<div class=\"comment-content\">					<div class=\"userIcon\">						<div class=\"imgBox\">							<img src=\"/images/userIcon.jpg\" alt=\"\">						</div>					</div>					<div class=\"commentInfo\">						<p class=\"userName\">							<span>pandakk</span>							<i class=\"icon iconfont\">&#xe616;</i>						</p>						<p class=\"comment-text\">{{comment}}</p>						<p class=\"user-listIcon\">							<i class=\"icon iconfont\">&#xe607;</i>							<i class=\"icon iconfont\">&#xe60e;</i>							<span><i class=\"icon iconfont\">&#xe62d;</i>{{comment_time}}</span>						</p>					</div>				</div>				<div class=\"commentNow\">					<a href=\"#\">我来点评&gt;&gt;</a>				</div>			</div>			<div class=\"recommendPro\">				<h3 class=\"detail-title\">相似推荐</h3>			</div>		</div>	</div></script>"
 
 /***/ },
 /* 16 */
 /***/ function(module, exports) {
 
-	module.exports = "<script id=\"showGroupData\" type=\"text/html\">	<div class=\"recommendPro-list\">		<ul>			{{each arr1 as value i}}			    <!-- <li>索引 {{i + 1}} ：{{value}}</li> -->			    <li><a href=\"./detail.html?_id={{value._id}}\"><img src=\"{{value}}\" alt=\"\"></a></li>			{{/each}}			<!-- <li><a href=\"#\"><img src=\"/images/recommendImg.jpg\" alt=\"\"></a></li>			<li><a href=\"#\"><img src=\"/images/recommendImg.jpg\" alt=\"\"></a></li>			<li><a href=\"#\"><img src=\"/images/recommendImg.jpg\" alt=\"\"></a></li> -->		</ul>		<ul>			{{each arr2 as value i}}			    <li><a href=\"#\"><img src=\"{{value}}\" alt=\"\"></a></li>			{{/each}}		</ul>		<ul>			{{each arr3 as value i}}			    <li><a href=\"#\"><img src=\"{{value}}\" alt=\"\"></a></li>			{{/each}}		</ul>	</div></script>"
+	module.exports = "<script id=\"bannertpl\" type=\"text/html\">    <div class=\"swiper-container\" id=\"{{id}}\">        <div class=\"swiper-wrapper\">            {{each list}}                <div class=\"swiper-slide\">{{#$value}}</div>            {{/each}}        </div>        {{if pagination}}            <div class=\"swiper-pagination\"></div>        {{/if}}        {{if button}}            <div class=\"swiper-button-prev\"></div>            <div class=\"swiper-button-next\"></div>        {{/if}}        {{if scrollbar}}            <div class=\"swiper-scrollbar\"></div>        {{/if}}    </div>             {{#swiper}}    </script>"
+
+/***/ },
+/* 17 */
+/***/ function(module, exports) {
+
+	module.exports = "<script id=\"showGroupData\" type=\"text/html\">	<div class=\"recommendPro-list\">		<ul>			{{each arr1 as value i}}			    <!-- <li>索引 {{i + 1}} ：{{value}}</li> -->			    <li><a href=\"./detail.html?_id={{value._id}}\"><img src=\"{{value}}\" alt=\"\"></a></li>			{{/each}}			<!-- <li><a href=\"#\"><img src=\"/images/recommendImg.jpg\" alt=\"\"></a></li>			<li><a href=\"#\"><img src=\"/images/recommendImg.jpg\" alt=\"\"></a></li>			<li><a href=\"#\"><img src=\"/images/recommendImg.jpg\" alt=\"\"></a></li> -->		</ul>		<ul>			{{each arr2 as value i}}			    <li><a href=\"#\"><img src=\"{{value}}\" alt=\"\"></a></li>			{{/each}}		</ul>		<ul>			{{each arr3 as value i}}			    <li><a href=\"#\"><img src=\"{{value}}\" alt=\"\"></a></li>			{{/each}}		</ul>	</div></script> "
 
 /***/ }
 /******/ ]);

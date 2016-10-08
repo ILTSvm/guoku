@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(18);
+	module.exports = __webpack_require__(19);
 
 
 /***/ },
@@ -10417,9 +10417,15 @@
 /* 13 */,
 /* 14 */,
 /* 15 */,
-/* 16 */,
+/* 16 */
+/***/ function(module, exports) {
+
+	module.exports = "<script id=\"bannertpl\" type=\"text/html\">    <div class=\"swiper-container\" id=\"{{id}}\">        <div class=\"swiper-wrapper\">            {{each list}}                <div class=\"swiper-slide\">{{#$value}}</div>            {{/each}}        </div>        {{if pagination}}            <div class=\"swiper-pagination\"></div>        {{/if}}        {{if button}}            <div class=\"swiper-button-prev\"></div>            <div class=\"swiper-button-next\"></div>        {{/if}}        {{if scrollbar}}            <div class=\"swiper-scrollbar\"></div>        {{/if}}    </div>             {{#swiper}}    </script>"
+
+/***/ },
 /* 17 */,
-/* 18 */
+/* 18 */,
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
@@ -10427,15 +10433,13 @@
 
 
 	var common = __webpack_require__(11);
-	var indexImageText = __webpack_require__(19);
+	var indexImageText = __webpack_require__(20);
 	var header = __webpack_require__(2);
-	var iconsnav = __webpack_require__(20);
+	var iconsnav = __webpack_require__(21);
 	var footer = __webpack_require__(8);
-	var banner = __webpack_require__(21);
+	var banner = __webpack_require__(22);
 	var list = __webpack_require__(23);
 	var sectionheader = __webpack_require__(24)
-
-
 
 	$('#container').append(header);
 	$('#container').append(banner.banner1);
@@ -10449,10 +10453,6 @@
 	$('#container').append(list);
 	$('#container').append(footer);
 	 
-
-
-	 
-
 	common.final([{
 	    url: 'http://wlwywlqk.cn/goods/getdata?pageindex=' + Math.floor(Math.random() * 100) + '&pagesize=12',
 	    success: banner.initbanner2,
@@ -10473,7 +10473,6 @@
 	 
 
 
-
 	var headerAnimate = __webpack_require__(4);
 
 
@@ -10486,19 +10485,19 @@
 
 
 /***/ },
-/* 19 */
+/* 20 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"index_imageText\">	<div>		<h3 class=\"index-title\">最新图文</h3>		<a class=\"more\" href=\"#\">查看更多<i class=\"icon iconfont\">&#xe602;</i></a>	</div>	<ul>		<li>			<a href=\"#\" class=\"img\"><img src=\"/images/image_text2.jpeg\" alt=\"\"></a>			<div>				<p><a href=\"#\">去年最棒的平面设计都在这里，来看看这个榜单</a></p>				<p>	                又一年过去了，在过去的一年里，平面设计师们孜孜不倦地丰富着我们的视觉世界。最近，itsnicethat...	            </p>			</div>		</li>		<li>			<a href=\"#\" class=\"img\"><img src=\"/images/image_text.jpeg\" alt=\"\"></a>			<div>				<p><a href=\"#\">去年最棒的平面设计都在这里，来看看这个榜单</a></p>				<p>	                又一年过去了，在过去的一年里，平面设计师们孜孜不倦地丰富着我们的视觉世界。最近，itsnicethat...	            </p>			</div>		</li>		<li>			<a href=\"#\" class=\"img\"><img src=\"/images/image_text3.jpeg\" alt=\"\"></a>			<div>				<p><a href=\"#\">去年最棒的平面设计都在这里，来看看这个榜单</a></p>				<p>	                又一年过去了，在过去的一年里，平面设计师们孜孜不倦地丰富着我们的视觉世界。最近，itsnicethat...	            </p>			</div>		</li>	</ul></div>"
 
 /***/ },
-/* 20 */
+/* 21 */
 /***/ function(module, exports) {
 
-	module.exports = "<nav class=\"iconsnav\">    <ul>        <li><a href=\"/pages/categorygroup.html?categorygroup=居家\"><img src=\"/images/1.png\" /><span>居家</span></a></li>        <li><a href=\"/pages/categorygroup.html?categorygroup=美容\"><img src=\"/images/8.png\" /><span>美容</span></a></li>        <li><a href=\"/pages/categorygroup.html?categorygroup=文化\"><img src=\"/images/10.png\" /><span>文化</span></a></li>        <li><a href=\"/pages/categorygroup.html?categorygroup=美食\"><img src=\"/images/12.png\" /><span>美食</span></a></li>        <li><a href=\"/pages/categorygroup.html?categorygroup=女装\"><img src=\"/images/13.png\" /><span>女装</span></a></li>        <li><a href=\"/pages/categorygroup.html?categorygroup=男装\"><img src=\"/images/14.png\" /><span>男装</span></a></li>        <li><a href=\"/pages/categorygroup.html?categorygroup=配饰\"><img src=\"/images/18.png\" /><span>配饰</span></a></li>        <li><a href=\"/pages/categorygroup.html?categorygroup=户外\"><img src=\"/images/20.png\" /><span>户外</span></a></li>        <li><a href=\"/pages/categorygroup.html?categorygroup=科技\"><img src=\"/images/21.png\" /><span>科技</span></a></li>        <li><a href=\"/pages/categorygroup.html?categorygroup=玩乐\"><img src=\"/images/25.png\" /><span>玩乐</span></a></li>        <li><a href=\"/pages/categorygroup.html?categorygroup=母婴\"><img src=\"/images/26.png\" /><span>母婴</span></a></li>        <li><a href=\"/pages/categorygroup.html?categorygroup=保健\"><img src=\"/images/37.png\" /><span>保健</span></a></li>    </ul></nav>"
+	module.exports = "<nav class=\"iconsnav\">    <ul>        <li><a href=\"./categorygroup.html?categorygroup=居家\"><img src=\"/images/1.png\" /><span>居家</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=美容\"><img src=\"/images/8.png\" /><span>美容</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=文化\"><img src=\"/images/10.png\" /><span>文化</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=美食\"><img src=\"/images/12.png\" /><span>美食</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=女装\"><img src=\"/images/13.png\" /><span>女装</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=男装\"><img src=\"/images/14.png\" /><span>男装</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=配饰\"><img src=\"/images/18.png\" /><span>配饰</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=户外\"><img src=\"/images/20.png\" /><span>户外</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=科技\"><img src=\"/images/21.png\" /><span>科技</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=玩乐\"><img src=\"/images/25.png\" /><span>玩乐</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=母婴\"><img src=\"/images/26.png\" /><span>母婴</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=保健\"><img src=\"/images/37.png\" /><span>保健</span></a></li>    </ul></nav>"
 
 /***/ },
-/* 21 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
@@ -10506,7 +10505,7 @@
 
 
 
-	var bannertpl = __webpack_require__(22);
+	var bannertpl = __webpack_require__(16);
 	var common = __webpack_require__(11);
 	$('body').append(bannertpl);
 	var banner = {
@@ -10563,12 +10562,6 @@
 	module.exports = banner;
 
 
-
-/***/ },
-/* 22 */
-/***/ function(module, exports) {
-
-	module.exports = "<script id=\"bannertpl\" type=\"text/html\">    <div class=\"swiper-container\" id=\"{{id}}\">        <div class=\"swiper-wrapper\">            {{each list}}                <div class=\"swiper-slide\">{{#$value}}</div>            {{/each}}        </div>        {{if pagination}}            <div class=\"swiper-pagination\"></div>        {{/if}}        {{if button}}            <div class=\"swiper-button-prev\"></div>            <div class=\"swiper-button-next\"></div>        {{/if}}        {{if scrollbar}}            <div class=\"swiper-scrollbar\"></div>        {{/if}}    </div>             {{#swiper}}    </script>"
 
 /***/ },
 /* 23 */
