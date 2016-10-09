@@ -2,17 +2,22 @@
 header{
 	@include flexbox();
 	@include flex();
+	@include flex-direction(column); 
 	width: 100%;
-	height: 50px;
-	padding: 0 15px;
-	border-bottom: 1px solid #ccc;
+	min-height: .5rem;
+	padding: 0 .15rem;
+	border-bottom: .01rem solid #ccc;
 	background: #FFF;
-	div{
+	.basicHeader{
+		width: 100%;
+		min-height: .5rem;
+	}
+	&>div{
 		@include flexbox();
 		@include flex();
 		@include align-items();
 		img{
-			width: 42px;
+			width: .42rem;
 		}
 	}
 	form{
@@ -20,13 +25,32 @@ header{
 		@include flex();
 		@include justify-content(flex-end);
 		@include align-items();
-		input{
-			border: none;
-			width: 22px;
-			height: 16px;
-			padding: 0 10px;
-			margin-right: 15px;
-			background: #666;
+		a{
+			display: block;
+			width: .22rem;
+			padding: 0 .15rem;
+			margin-right: .15rem;
+			i{
+				color: #000;
+				font-size: .22rem !important;
+				font-weight: 700;
+			}
+		}
+	}
+
+	ul{
+		@include flexbox();
+		@include flex();
+		@include justify-content();
+		width: 100%;
+		margin: .16rem 0;
+		li{
+			@include flex();
+			text-align: center;
+			a{
+				color: #757575;
+				font-size: .18rem;
+			}
 		}
 	}
 }

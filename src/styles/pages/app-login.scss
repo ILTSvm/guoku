@@ -1,0 +1,54 @@
+﻿@charset "utf-8";
+@import "../usage/core/reset";
+@import "../utils/common";
+@import "../modules/header";
+
+@import "../modules/footer";
+body{
+    background-color: #fff;     
+} 
+.container{
+    font: 16px/20px "微软雅黑";
+    @include flexbox();
+    @include flex-direction(column);
+    margin: 72px auto;
+    width: 80%;
+    .tips{
+        @include flexbox();
+        @include justify-content(space-between);
+        margin-bottom: 32px; 
+    }
+    .loginform{
+        @include flexbox();
+        @include flex-direction(column);
+        @include align-items(center);
+        input:not([type="checkbox"]){
+           // @include border(1px, #eee, solid, 4px);
+            border: 1px solid #eee;
+            
+            width: 95%;
+            padding: 6px 12px; 
+            @include border-radius(4px);
+            color: rgb(85, 85, 85);
+            margin: 8px 0;
+            font-size: 14px;
+        }  
+        .row{
+            @include flexbox();
+            @include justify-content(space-between);
+            margin: 14px 0;
+            width: 95%;
+            padding: 0 12px;
+        }  
+        #login{   
+            color: #fff;
+            font-size: 18px;
+            width: 100%;
+            border: 0;
+            border-radius: 4px;
+            background-color: #6192FF;
+            height: 43px;
+            margin-bottom: 10px;
+        }
+    }
+}   

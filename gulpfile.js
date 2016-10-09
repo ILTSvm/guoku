@@ -92,8 +92,11 @@ gulp.task('packjs', function () {
             test: /\.string$/,
             loader: 'string'
           },
-          { test: /\.html|\.json$/,
-            loader: "string" 
+          { test: /\.json$/,
+            loader: "string"
+          },
+          { test: /\.html$/,
+            loader: "string"
           }
         ]
       }
@@ -151,12 +154,11 @@ gulp.task('copy-images', function () {
 gulp.task('watch', function () {
   gulp.watch('./pages/*.html', ['copy-index']);
   gulp.watch('./images/**/*', ['copy-images']);
-  gulp.watch('./src/styles/pages/**/*', ['scss']);
-  gulp.watch('./src/scripts/pages/**/*', ['packjs']);
+  gulp.watch('./src/styles/**/*', ['scss']);
+  gulp.watch('./src/scripts/**/*', ['packjs']);
 });
 
 // 配置 default 任务，执行任务队列
 gulp.task('default', ['watch', 'webserver', 'copy-libs'], function () {
   console.log('任务队列执行完毕~');
 });
-

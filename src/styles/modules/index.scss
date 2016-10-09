@@ -1,0 +1,35 @@
+
+    #list-box{
+        @include flexbox();
+        flex-wrap: wrap;
+        flex:1;
+        li{
+            padding:10px;
+            width:50%;
+            height:100%;
+            a{
+                height:100%;
+                width: 100%;
+                @include flexbox();
+                flex-direction: column;
+                @include justify-content(flex-end);
+            }
+
+            img{
+                width:100%;
+                @include align-self(flex-start);
+            }
+            p{
+                flex: 1;
+                font-size:14px;
+                width:100%;
+            }
+            span{
+                flex: 1;
+                font-size:14px;
+                color:darkgoldenrod;
+                width:100%;
+            }
+        }
+    }
+

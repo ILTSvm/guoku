@@ -1,0 +1,23 @@
+<script id="showGroupData" type="text/html">
+	<div class="recommendPro-list">
+		<ul>
+			{{each arr1 as value i}}
+			    <!-- <li>索引 {{i + 1}} ：{{value}}</li> -->
+			    <li><a href="./detail.html?_id={{value._id}}"><img src="{{value}}" alt=""></a></li>
+			{{/each}}
+			<!-- <li><a href="#"><img src="/images/recommendImg.jpg" alt=""></a></li>
+			<li><a href="#"><img src="/images/recommendImg.jpg" alt=""></a></li>
+			<li><a href="#"><img src="/images/recommendImg.jpg" alt=""></a></li> -->
+		</ul>
+		<ul>
+			{{each arr2 as value i}}
+			    <li><a href="#"><img src="{{value}}" alt=""></a></li>
+			{{/each}}
+		</ul>
+		<ul>
+			{{each arr3 as value i}}
+			    <li><a href="#"><img src="{{value}}" alt=""></a></li>
+			{{/each}}
+		</ul>
+	</div>
+</script> 
