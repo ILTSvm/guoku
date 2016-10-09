@@ -10340,9 +10340,9 @@
 	$('#container').append(footer);
 
 	if(common.GetRequest("categorygroup")){
-		var _url = 'http://wlwywlqk.cn/goods/getData?categorygroup='+common.GetRequest("categorygroup");
+		var _url = 'https://wlwywlqk.cn/goods/getData?categorygroup='+common.GetRequest("categorygroup")+'&pageindex=1&pagesize=40';
 	}else{
-		var _url = 'http://wlwywlqk.cn/goods/getData?pageindex=1&pagesize=50';
+		var _url = 'https://wlwywlqk.cn/goods/getData?pageindex=1&pagesize=50';
 	}
 	 
 	common.final(
@@ -10371,7 +10371,7 @@
 /* 10 */
 /***/ function(module, exports) {
 
-	module.exports = "<ul id = \"list-box\"></ul><script id=\"w_index_list\" type=\"text/html\">   {{each product}}       <li>       	<a href=\"./detail.html?_id={{$value._id}}\">       		<img src=\"http://wlwywlqk.cn/img/{{$value.piclists[0]}}\" data-imgname=\"{{$value.piclists[0]}}\">           <p class=\"w_pname\" data-thisId = \"{{$value._id}}\">{{$value.name}}</p>           <span class=\"w_price\">{{$value.price}}</span>       	</a>       </li>   {{/each}}</script>"
+	module.exports = "<ul id = \"list-box\"></ul><script id=\"w_index_list\" type=\"text/html\">   {{each product}}       <li>       	<a href=\"./detail.html?_id={{$value._id}}\">       		<img src=\"https://wlwywlqk.cn/img/{{$value.piclists[0]}}\" data-imgname=\"{{$value.piclists[0]}}\">           <p class=\"w_pname\" data-thisId = \"{{$value._id}}\">{{$value.name}}</p>           <span class=\"w_price\">{{$value.price}}</span>       	</a>       </li>   {{/each}}</script>"
 
 /***/ },
 /* 11 */

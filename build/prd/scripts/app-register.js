@@ -45,7 +45,7 @@
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(28);
+	module.exports = __webpack_require__(27);
 
 
 /***/ },
@@ -10327,7 +10327,7 @@
 
 /***/ },
 
-/***/ 28:
+/***/ 27:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
@@ -10335,7 +10335,7 @@
 
 	var header = __webpack_require__(2);
 	var footer = __webpack_require__(8);
-	var register = __webpack_require__(29);
+	var register = __webpack_require__(28);
 	var headerAnimate = __webpack_require__(4);
 
 	$('body').prepend(footer);
@@ -10349,7 +10349,7 @@
 	    var rpassword = $('#rpassword').val();
 	    if (password === rpassword) {
 	        $.ajax({
-	            url: 'http://wlwywlqk.cn/users/register',
+	            url: 'https://wlwywlqk.cn/users/register',
 	            type: 'post',
 	            data: {
 	                username: username,
@@ -10358,7 +10358,7 @@
 	            },
 	            success: function (res) {
 	                if (res === "1") {
-	                    location.href = '/pages/login.html';
+	                    location.href = '/login.html';
 	                } else {
 	                    $('#tip').text(res);
 	                    setTimeout(function () {
@@ -10383,10 +10383,10 @@
 
 /***/ },
 
-/***/ 29:
+/***/ 28:
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"container\">    <div class=\"tips\">        <span>注册&nbsp;&nbsp;|&nbsp;&nbsp;已有帐号？</span>        <a href=\"/pages/login.html\">去登录&gt;&gt;</a>    </div>    <form class=\"registerform\">        <input id=\"username\" type=\"text\" pattern=\"[\\u4e00-\\u9fa5\\w]{2,10}\" oninvalid=\"setCustomValidity(\'2-10位合法字符\');\" oninput=\"setCustomValidity(\'\');\" required placeholder=\"用户名\">        <input id=\"email\" type=\"email\" required placeholder=\"邮箱\">        <input id=\"password\" type=\"password\" pattern=\"[\\w]{4,20}\" oninvalid=\"setCustomValidity(\'4-20位合法字符\');\" oninput=\"setCustomValidity(\'\');\" required placeholder=\"密码\">        <input id=\"rpassword\" type=\"password\" pattern=\"[\\w]{4,20}\" placeholder=\"重复密码\">        <div class=\"row\"><label ><input type=\"checkbox\" value=\"remember\" required> 我已同意使用协议</label></div>        <input type=\"submit\" id=\"register\" value=\"注册\" >        <p id=\"tip\"></p>    </form></div>  "
+	module.exports = "<div class=\"container\">    <div class=\"tips\">        <span>注册&nbsp;&nbsp;|&nbsp;&nbsp;已有帐号？</span>        <a href=\"./login.html\">去登录&gt;&gt;</a>    </div>    <form class=\"registerform\">        <input id=\"username\" type=\"text\" pattern=\"[\\u4e00-\\u9fa5\\w]{2,10}\" oninvalid=\"setCustomValidity(\'2-10位合法字符\');\" oninput=\"setCustomValidity(\'\');\" required placeholder=\"用户名\">        <input id=\"email\" type=\"email\" required placeholder=\"邮箱\">        <input id=\"password\" type=\"password\" pattern=\"[\\w]{4,20}\" oninvalid=\"setCustomValidity(\'4-20位合法字符\');\" oninput=\"setCustomValidity(\'\');\" required placeholder=\"密码\">        <input id=\"rpassword\" type=\"password\" pattern=\"[\\w]{4,20}\" placeholder=\"重复密码\">        <div class=\"row\"><label ><input type=\"checkbox\" value=\"remember\" required> 我已同意使用协议</label></div>        <input type=\"submit\" id=\"register\" value=\"注册\" >        <p id=\"tip\"></p>    </form></div>  "
 
 /***/ }
 

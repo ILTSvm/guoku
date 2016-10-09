@@ -34,7 +34,7 @@ var detailGroupData = require("../tpls/detail_groupPro.html")
 $('body').prepend(detailContent);
 $('body').prepend(detailGroupData);
 
-var url = "http://wlwywlqk.cn/goods/getData?_id="+Request.id;
+var url = "https://wlwywlqk.cn/goods/getData?_id="+Request.id;
 
 // 请求商品数据
 function getAjax(url, fn){
@@ -81,7 +81,7 @@ function findNameEn(data){
 function getGroupPro(gropPro){
 	var pageIndex = Math.ceil(Math.random()*2);
 	var pageIndex = 1;
-	var url = "http://wlwywlqk.cn/goods/search?search="+gropPro+"&pageindex="+pageIndex+"&pagesize=9";
+	var url = "https://wlwywlqk.cn/goods/search?search="+gropPro+"&pageindex="+pageIndex+"&pagesize=9";
 	getAjax(url, showGroupData);
 }
 
@@ -91,7 +91,7 @@ function showGroupData(data){
 	obj.arr1 = [];
 	obj.arr2 = [];
 	obj.arr3 = [];
-	var str = "http://wlwywlqk.cn/img/";
+	var str = "https://wlwywlqk.cn/img/";
 	var arr = obj.arr1;
 	var j = 0;
 	for(var i=0; i<9; i++){

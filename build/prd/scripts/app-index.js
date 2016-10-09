@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(19);
+	module.exports = __webpack_require__(18);
 
 
 /***/ },
@@ -10424,8 +10424,7 @@
 
 /***/ },
 /* 17 */,
-/* 18 */,
-/* 19 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
@@ -10433,13 +10432,13 @@
 
 
 	var common = __webpack_require__(11);
-	var indexImageText = __webpack_require__(20);
+	var indexImageText = __webpack_require__(19);
 	var header = __webpack_require__(2);
-	var iconsnav = __webpack_require__(21);
+	var iconsnav = __webpack_require__(20);
 	var footer = __webpack_require__(8);
-	var banner = __webpack_require__(22);
-	var list = __webpack_require__(23);
-	var sectionheader = __webpack_require__(24)
+	var banner = __webpack_require__(21);
+	var list = __webpack_require__(22);
+	var sectionheader = __webpack_require__(23)
 
 	$('#container').append(header);
 	$('#container').append(banner.banner1);
@@ -10454,11 +10453,11 @@
 	$('#container').append(footer);
 	 
 	common.final([{
-	    url: 'http://wlwywlqk.cn/goods/getdata?pageindex=' + Math.floor(Math.random() * 100) + '&pagesize=12',
+	    url: 'https://wlwywlqk.cn/goods/getdata?pageindex=' + Math.floor(Math.random() * 100) + '&pagesize=12',
 	    success: banner.initbanner2,
 	},
 		{
-			url: 'http://wlwywlqk.cn/goods/getData?pageindex=1&pagesize=50',
+			url: 'https://wlwywlqk.cn/goods/getData?pageindex=1&pagesize=50',
 			success:function(data){
 				console.log(data);
 				var datajson=JSON.parse(data);
@@ -10485,19 +10484,19 @@
 
 
 /***/ },
-/* 20 */
+/* 19 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"index_imageText\">	<div>		<h3 class=\"index-title\">最新图文</h3>		<a class=\"more\" href=\"#\">查看更多<i class=\"icon iconfont\">&#xe602;</i></a>	</div>	<ul>		<li>			<a href=\"#\" class=\"img\"><img src=\"/images/image_text2.jpeg\" alt=\"\"></a>			<div>				<p><a href=\"#\">去年最棒的平面设计都在这里，来看看这个榜单</a></p>				<p>	                又一年过去了，在过去的一年里，平面设计师们孜孜不倦地丰富着我们的视觉世界。最近，itsnicethat...	            </p>			</div>		</li>		<li>			<a href=\"#\" class=\"img\"><img src=\"/images/image_text.jpeg\" alt=\"\"></a>			<div>				<p><a href=\"#\">去年最棒的平面设计都在这里，来看看这个榜单</a></p>				<p>	                又一年过去了，在过去的一年里，平面设计师们孜孜不倦地丰富着我们的视觉世界。最近，itsnicethat...	            </p>			</div>		</li>		<li>			<a href=\"#\" class=\"img\"><img src=\"/images/image_text3.jpeg\" alt=\"\"></a>			<div>				<p><a href=\"#\">去年最棒的平面设计都在这里，来看看这个榜单</a></p>				<p>	                又一年过去了，在过去的一年里，平面设计师们孜孜不倦地丰富着我们的视觉世界。最近，itsnicethat...	            </p>			</div>		</li>	</ul></div>"
 
 /***/ },
-/* 21 */
+/* 20 */
 /***/ function(module, exports) {
 
 	module.exports = "<nav class=\"iconsnav\">    <ul>        <li><a href=\"./categorygroup.html?categorygroup=居家\"><img src=\"/images/1.png\" /><span>居家</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=美容\"><img src=\"/images/8.png\" /><span>美容</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=文化\"><img src=\"/images/10.png\" /><span>文化</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=美食\"><img src=\"/images/12.png\" /><span>美食</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=女装\"><img src=\"/images/13.png\" /><span>女装</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=男装\"><img src=\"/images/14.png\" /><span>男装</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=配饰\"><img src=\"/images/18.png\" /><span>配饰</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=户外\"><img src=\"/images/20.png\" /><span>户外</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=科技\"><img src=\"/images/21.png\" /><span>科技</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=玩乐\"><img src=\"/images/25.png\" /><span>玩乐</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=母婴\"><img src=\"/images/26.png\" /><span>母婴</span></a></li>        <li><a href=\"./categorygroup.html?categorygroup=保健\"><img src=\"/images/37.png\" /><span>保健</span></a></li>    </ul></nav>"
 
 /***/ },
-/* 22 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
@@ -10537,7 +10536,7 @@
 	            }
 	        };
 	        for (var i = 0; i < len; i++) {
-	            tpldata.list[i] = '<a class="banneritem" href="/pages/detail.html?_id=' + goods[i]._id + '"><img src="http://wlwywlqk.cn/img/' + goods[i].piclists[0] + '"><span class="banneritemname">' + goods[i].name + '</span><span class="banneritemprice">￥' + goods[i].price + '</span></a>';
+	            tpldata.list[i] = '<a class="banneritem" href="./detail.html?_id=' + goods[i]._id + '"><img src="https://wlwywlqk.cn/img/' + goods[i].piclists[0] + '"><span class="banneritemname">' + goods[i].name + '</span><span class="banneritemprice">￥' + goods[i].price + '</span></a>';
 	        }
 	        $('#goodsbanner').html(common.tpl('bannertpl', tpldata));
 	    },
@@ -10564,19 +10563,19 @@
 
 
 /***/ },
-/* 23 */
+/* 22 */
 /***/ function(module, exports) {
 
-	module.exports = "<!--<ul id = \"list-box\">	<li>		<img src = \"../../../images/1.png\">	</li></ul>--><ul id = \"list-box\"></ul><script id=\"w_index_list\" type=\"text/html\">   {{each product}}       <li>       	<a href=\"./detail.html?_id={{$value._id}}\">       		<img src=\"http://wlwywlqk.cn/img/{{$value.piclists[0]}}\" data-imgname=\"{{$value.piclists[0]}}\">           <p class=\"w_pname\" data-thisId = \"{{$value._id}}\">{{$value.name}}</p>           <span class=\"w_price\">{{$value.price}}</span>       	</a>       </li>   {{/each}}</script>"
+	module.exports = "<!--<ul id = \"list-box\">	<li>		<img src = \"../../../images/1.png\">	</li></ul>--><ul id = \"list-box\"></ul><script id=\"w_index_list\" type=\"text/html\">   {{each product}}       <li>       	<a href=\"./detail.html?_id={{$value._id}}\">       		<img src=\"https://wlwywlqk.cn/img/{{$value.piclists[0]}}\" data-imgname=\"{{$value.piclists[0]}}\">           <p class=\"w_pname\" data-thisId = \"{{$value._id}}\">{{$value.name}}</p>           <span class=\"w_price\">{{$value.price}}</span>       	</a>       </li>   {{/each}}</script>"
 
 /***/ },
-/* 24 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	var define = false;
 
-	var sectionheadertpl = __webpack_require__(25);
+	var sectionheadertpl = __webpack_require__(24);
 	$('body').append(sectionheadertpl);
 	var sectionheader = {
 	  jingxuanshangpin:template("sectionheadertpl",{
@@ -10599,7 +10598,7 @@
 
 
 /***/ },
-/* 25 */
+/* 24 */
 /***/ function(module, exports) {
 
 	module.exports = "<script id=\"sectionheadertpl\" type=\"text/html\">    <div class=\"sectionheader\">      <h2>{{title}}</h2>      {{if href}}        <a href=\"{{href}}\">查看更多 &gt;</a>      {{/if}}    </d></script>"

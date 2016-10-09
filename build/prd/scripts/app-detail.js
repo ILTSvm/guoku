@@ -12656,7 +12656,7 @@
 	$('body').prepend(detailContent);
 	$('body').prepend(detailGroupData);
 
-	var url = "http://wlwywlqk.cn/goods/getData?_id="+Request.id;
+	var url = "https://wlwywlqk.cn/goods/getData?_id="+Request.id;
 
 	// 请求商品数据
 	function getAjax(url, fn){
@@ -12703,7 +12703,7 @@
 	function getGroupPro(gropPro){
 		var pageIndex = Math.ceil(Math.random()*2);
 		var pageIndex = 1;
-		var url = "http://wlwywlqk.cn/goods/search?search="+gropPro+"&pageindex="+pageIndex+"&pagesize=9";
+		var url = "https://wlwywlqk.cn/goods/search?search="+gropPro+"&pageindex="+pageIndex+"&pagesize=9";
 		getAjax(url, showGroupData);
 	}
 
@@ -12713,7 +12713,7 @@
 		obj.arr1 = [];
 		obj.arr2 = [];
 		obj.arr3 = [];
-		var str = "http://wlwywlqk.cn/img/";
+		var str = "https://wlwywlqk.cn/img/";
 		var arr = obj.arr1;
 		var j = 0;
 		for(var i=0; i<9; i++){
@@ -12737,7 +12737,7 @@
 /* 15 */
 /***/ function(module, exports) {
 
-	module.exports = "<script id=\"test\" type=\"text/html\">	<div id=\"detail\">		<div id=\"detailIscroll\">			<div class=\"swiper-container\">					<div class=\"swiper-wrapper\">						{{each piclists}}							<div class=\"swiper-slide\"><img width=\"100vw\" height=\"100vw\" src=\"http://wlwywlqk.cn/img/{{$value}}\" alt=\"\"></div>						{{/each}}					</div>					<div class=\"swiper-pagination\"></div>			</div>			<div class=\"detail-info\">				<p class=\"proNameEn\">{{nameEn}}</p>				<h3 class=\"proName\">{{name}}</h3>				<p class=\"proPrice\">{{price}}</p>				<p class=\"proStatus\">					<span><i class=\"icon iconfont\">&#xe640;</i>8</span>					<span><i class=\"icon iconfont\">&#xe617;</i>1</span>				</p>				<div class=\"detail-btn\">					<a class=\"love\" href=\"#\"><i class=\"icon iconfont\">&#xe640;</i>喜爱</a>					<a class=\"buyPro\" href=\"#\"><i class=\"icon iconfont\">&#xe640;</i>购买</a>					<p><span>8人喜爱</span><a class=\"more\" href=\"#\">&gt;&gt;</a></p>				</div>				<div class=\"share\">					<span><i class=\"icon iconfont\">&#x3488;</i></span>					<span><i class=\"icon iconfont\">&#xe60a;</i></span>					<span><i class=\"icon iconfont\">&#x3488;</i></span>				</div> 			</div>			<div class=\"detail-border\"></div>			<div class=\"user-comment\">				<h3 class=\"detail-title\">用户点评</h3>				<div class=\"comment-content\">					<div class=\"userIcon\">						<div class=\"imgBox\">							<img src=\"/images/userIcon.jpg\" alt=\"\">						</div>					</div>					<div class=\"commentInfo\">						<p class=\"userName\">							<span>pandakk</span>							<i class=\"icon iconfont\">&#xe616;</i>						</p>						<p class=\"comment-text\">{{comment}}</p>						<p class=\"user-listIcon\">							<i class=\"icon iconfont\">&#xe607;</i>							<i class=\"icon iconfont\">&#xe60e;</i>							<span><i class=\"icon iconfont\">&#xe62d;</i>{{comment_time}}</span>						</p>					</div>				</div>				<div class=\"commentNow\">					<a href=\"#\">我来点评&gt;&gt;</a>				</div>			</div>			<div class=\"recommendPro\">				<h3 class=\"detail-title\">相似推荐</h3>			</div>		</div>	</div></script>"
+	module.exports = "<script id=\"test\" type=\"text/html\">	<div id=\"detail\">		<div id=\"detailIscroll\">			<div class=\"swiper-container\">					<div class=\"swiper-wrapper\">						{{each piclists}}							<div class=\"swiper-slide\"><img width=\"100vw\" height=\"100vw\" src=\"https://wlwywlqk.cn/img/{{$value}}\" alt=\"\"></div>						{{/each}}					</div>					<div class=\"swiper-pagination\"></div>			</div>			<div class=\"detail-info\">				<p class=\"proNameEn\">{{nameEn}}</p>				<h3 class=\"proName\">{{name}}</h3>				<p class=\"proPrice\">{{price}}</p>				<p class=\"proStatus\">					<span><i class=\"icon iconfont\">&#xe640;</i>8</span>					<span><i class=\"icon iconfont\">&#xe617;</i>1</span>				</p>				<div class=\"detail-btn\">					<a class=\"love\" href=\"#\"><i class=\"icon iconfont\">&#xe640;</i>喜爱</a>					<a class=\"buyPro\" href=\"#\"><i class=\"icon iconfont\">&#xe640;</i>购买</a>					<p><span>8人喜爱</span><a class=\"more\" href=\"#\">&gt;&gt;</a></p>				</div>				<div class=\"share\">					<span><i class=\"icon iconfont\">&#x3488;</i></span>					<span><i class=\"icon iconfont\">&#xe60a;</i></span>					<span><i class=\"icon iconfont\">&#x3488;</i></span>				</div> 			</div>			<div class=\"detail-border\"></div>			<div class=\"user-comment\">				<h3 class=\"detail-title\">用户点评</h3>				<div class=\"comment-content\">					<div class=\"userIcon\">						<div class=\"imgBox\">							<img src=\"/images/userIcon.jpg\" alt=\"\">						</div>					</div>					<div class=\"commentInfo\">						<p class=\"userName\">							<span>pandakk</span>							<i class=\"icon iconfont\">&#xe616;</i>						</p>						<p class=\"comment-text\">{{comment}}</p>						<p class=\"user-listIcon\">							<i class=\"icon iconfont\">&#xe607;</i>							<i class=\"icon iconfont\">&#xe60e;</i>							<span><i class=\"icon iconfont\">&#xe62d;</i>{{comment_time}}</span>						</p>					</div>				</div>				<div class=\"commentNow\">					<a href=\"#\">我来点评&gt;&gt;</a>				</div>			</div>			<div class=\"recommendPro\">				<h3 class=\"detail-title\">相似推荐</h3>			</div>		</div>	</div></script>"
 
 /***/ },
 /* 16 */

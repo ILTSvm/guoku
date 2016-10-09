@@ -45,7 +45,7 @@
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(26);
+	module.exports = __webpack_require__(25);
 
 
 /***/ },
@@ -10327,7 +10327,7 @@
 
 /***/ },
 
-/***/ 26:
+/***/ 25:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
@@ -10335,7 +10335,7 @@
 
 	var header = __webpack_require__(2);
 	var footer = __webpack_require__(8);
-	var login = __webpack_require__(27);
+	var login = __webpack_require__(26);
 	var headerAnimate = __webpack_require__(4);
 
 	$('body').prepend(footer);
@@ -10347,7 +10347,7 @@
 	    var password = $('#password').val();
 
 	    $.ajax({
-	        url: 'http://wlwywlqk.cn/users/login',
+	        url: 'https://wlwywlqk.cn/users/login',
 	        type: 'post',
 	        data: {
 	            email: email,
@@ -10355,7 +10355,7 @@
 	        },
 	        success: function (res) {
 	            if (res === "1") {
-	                location.href = '/pages/index.html';
+	                location.href = '/index.html';
 	            } else {
 	                $('#tip').text(res);
 	                setTimeout(function () {
@@ -10375,10 +10375,10 @@
 
 /***/ },
 
-/***/ 27:
+/***/ 26:
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"container\">    <div class=\"tips\">        <span>登录&nbsp;&nbsp;|&nbsp;&nbsp;没有帐号？</span>        <a href=\"/pages/register.html\">去注册&gt;&gt;</a>    </div>    <form class=\"loginform\">        <input id=\"email\" type=\"email\" required placeholder=\"邮箱\">        <input id=\"password\" type=\"password\" pattern=\"[\\w]{4,20}\" oninvalid=\"setCustomValidity(\'4-20位合法字符\');\" oninput=\"setCustomValidity(\'\');\" required placeholder=\"密码\">        <div class=\"row\"><label ><input type=\"checkbox\" value=\"remember\"> 记住密码</label></div>        <input type=\"submit\" id=\"login\" value=\"登录\" >        <p id=\"tip\"></p>    </form>    <div class=\"bdsharebuttonbox\"><a href=\"#\" class=\"bds_more\" data-cmd=\"more\"></a><a href=\"#\" class=\"bds_tsina\" data-cmd=\"tsina\" title=\"分享到新浪微博\"></a><a href=\"#\" class=\"bds_weixin\" data-cmd=\"weixin\" title=\"分享到微信\"></a><a href=\"#\" class=\"bds_sqq\" data-cmd=\"sqq\" title=\"分享到QQ好友\"></a></div><script>window._bd_share_config={\"common\":{\"bdSnsKey\":{},\"bdText\":\"\",\"bdMini\":\"2\",\"bdMiniList\":false,\"bdPic\":\"\",\"bdStyle\":\"1\",\"bdSize\":\"24\"},\"share\":{}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script></div> "
+	module.exports = "<div class=\"container\">    <div class=\"tips\">        <span>登录&nbsp;&nbsp;|&nbsp;&nbsp;没有帐号？</span>        <a href=\"./register.html\">去注册&gt;&gt;</a>    </div>    <form class=\"loginform\">        <input id=\"email\" type=\"email\" required placeholder=\"邮箱\">        <input id=\"password\" type=\"password\" pattern=\"[\\w]{4,20}\" oninvalid=\"setCustomValidity(\'4-20位合法字符\');\" oninput=\"setCustomValidity(\'\');\" required placeholder=\"密码\">        <div class=\"row\"><label ><input type=\"checkbox\" value=\"remember\"> 记住密码</label></div>        <input type=\"submit\" id=\"login\" value=\"登录\" >        <p id=\"tip\"></p>    </form>    <div class=\"bdsharebuttonbox\"><a href=\"#\" class=\"bds_more\" data-cmd=\"more\"></a><a href=\"#\" class=\"bds_tsina\" data-cmd=\"tsina\" title=\"分享到新浪微博\"></a><a href=\"#\" class=\"bds_weixin\" data-cmd=\"weixin\" title=\"分享到微信\"></a><a href=\"#\" class=\"bds_sqq\" data-cmd=\"sqq\" title=\"分享到QQ好友\"></a></div><script>window._bd_share_config={\"common\":{\"bdSnsKey\":{},\"bdText\":\"\",\"bdMini\":\"2\",\"bdMiniList\":false,\"bdPic\":\"\",\"bdStyle\":\"1\",\"bdSize\":\"24\"},\"share\":{}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script></div> "
 
 /***/ }
 

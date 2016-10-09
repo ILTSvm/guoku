@@ -12,7 +12,7 @@ $('.loginform').submit(function () {
     var password = $('#password').val();
 
     $.ajax({
-        url: 'http://wlwywlqk.cn/users/login',
+        url: 'https://wlwywlqk.cn/users/login',
         type: 'post',
         data: {
             email: email,
@@ -20,7 +20,7 @@ $('.loginform').submit(function () {
         },
         success: function (res) {
             if (res === "1") {
-                location.href = '/pages/index.html';
+                location.href = '/index.html';
             } else {
                 $('#tip').text(res);
                 setTimeout(function () {
