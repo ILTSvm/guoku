@@ -53,7 +53,7 @@
 /***/ 2:
 /***/ function(module, exports) {
 
-	module.exports = "<header>	<div class=\"basicHeader\">		<div><img src=\"/images/top_search_logo.png\" alt=\"\"></div>		<form>			<input id=\"searchTxt\" type=\"text\" placeholder = \"男装/T恤/家电/水果/酒水\"/> 			<a id=\"searchBtn\" href=\"javascript:void\"><i class=\"icon iconfont\">&#xe606;</i></a>			<a id=\"header-listbar\" href=\"javascript:void\"><i class=\"icon iconfont\">&#x3557;</i></a>		</form>	</div>	<ul>		<li><a href=\"./index.html\">首页</a></li>		<li><a href=\"./articles.html\">图文</a></li>		<li><a href=\"./categorygroup.html\">专题</a></li>	</ul>	<ul>		<li><a href=\"./categorygroup.html\">好店</a></li>		<li><a href=\"./login.html\">登录</a></li>		<li><a href=\"./register.html\">注册</a></li>	</ul></header>"
+	module.exports = "<header>	<div class=\"basicHeader\">		<div><img src=\"/images/top_search_logo.png\" alt=\"\"></div>		<form>			<input id=\"searchTxt\" type=\"text\" placeholder = \"男装/T恤/水果/酒水\"/> 			<a id=\"searchBtn\" href=\"javascript:void\"><i class=\"icon iconfont\">&#xe606;</i></a>			<a id=\"header-listbar\" href=\"javascript:void\"><i class=\"icon iconfont\">&#x3557;</i></a>		</form>	</div>	<ul>		<li><a href=\"./index.html\">首页</a></li>		<li><a href=\"./articles.html\">图文</a></li>		<li><a href=\"./categorygroup.html\">专题</a></li>		<li><a href=\"./categorygroup.html\">好店</a></li>		<li><a href=\"./login.html\">登录</a></li>		<li><a href=\"./register.html\">注册</a></li>	</ul></header>"
 
 /***/ },
 
@@ -10337,7 +10337,6 @@
 	var header = __webpack_require__(2);
 	var footer = __webpack_require__(8);
 	var register = __webpack_require__(28);
-	var headerAnimate = __webpack_require__(4);
 
 	$('body').prepend(footer);
 	$('body').prepend(register);

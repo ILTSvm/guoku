@@ -651,6 +651,7 @@ a {
   vertical-align: middle; }
 
 header {
+  font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -700,9 +701,11 @@ header {
     header form input {
       color: #ccc;
       background: #fff;
+      width: 1.5rem;
       border: 0;
       border-bottom: .01rem solid #ccc; }
     header form a {
+      font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
       display: block;
       width: .22rem;
       padding: 0 .15rem;
@@ -732,7 +735,7 @@ header {
       text-align: center; }
       header ul li a {
         color: #757575;
-        font-size: .18rem; }
+        font-size: .16rem; }
 
 footer {
   display: -webkit-box;

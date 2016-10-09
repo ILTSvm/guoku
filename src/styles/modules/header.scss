@@ -1,5 +1,6 @@
 
 header{
+    font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
 	@include flexbox();
 	@include flex();
 	@include flex-direction(column); 
@@ -28,13 +29,15 @@ header{
 		input{
 		    color:#ccc;
 		    background: #fff;
+		    width:1.5rem;
 		    border:0; 
 		    border-bottom:.01rem solid #ccc;  
 		}
 		a{
+		    font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
 			display: block;
 			width: .22rem;
-			padding: 0 .15rem; 
+			padding: 0 .15rem;  
 			margin-right: .15rem;
 			i{
 				color: #000;
@@ -55,7 +58,7 @@ header{
 			text-align: center;
 			a{
 				color: #757575;
-				font-size: .18rem;
+				font-size: .16rem;
 			}
 		}
 	}

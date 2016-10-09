@@ -1,7 +1,7 @@
 var header = require("../tpls/header.html");
 var footer = require("../tpls/footer.html");
 var login = require("../tpls/login.html");
-var headerAnimate = require("../modules/header.js");
+
 
 $('body').prepend(footer);
 $('body').prepend(login);
@@ -33,5 +33,5 @@ $('.loginform').submit(function () {
 
 });
 
-
+var headerAnimate = require("../modules/header.js");
 
