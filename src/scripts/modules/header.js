@@ -14,6 +14,7 @@ var headerJs = {
 		$('#searchBtn').click(function(){
 			var keyword = $('#searchTxt').val();
 			console.log(keyword);
+			window.location.href = "/build/categorygroup.html?value="+keyword; 
 		});
 	})()
 };

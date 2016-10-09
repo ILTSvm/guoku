@@ -697,6 +697,11 @@ header {
     -webkit-box-align: center;
     -webkit-align-items: center;
     align-items: center; }
+    header form input {
+      color: #ccc;
+      background: #fff;
+      border: 0;
+      border-bottom: .01rem solid #ccc; }
     header form a {
       display: block;
       width: .22rem;

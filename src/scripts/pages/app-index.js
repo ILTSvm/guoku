@@ -27,7 +27,6 @@ common.final([{
 	{
 		url: 'https://wlwywlqk.cn/goods/getData?pageindex=1&pagesize=50',
 		success:function(data){
-			console.log(data);
 			var datajson=JSON.parse(data);
 			var html = template('w_index_list', {product:datajson});
 			document.getElementById('list-box').innerHTML = html;
@@ -42,11 +41,6 @@ common.final([{
 
 var headerAnimate = require("../modules/header.js");
 
-
-   var header = require("../tpls/header.html");
-   var footer = require("../tpls/footer.html");
-   $('body').prepend(footer);
-   $('body').prepend(header); 
 
 
 

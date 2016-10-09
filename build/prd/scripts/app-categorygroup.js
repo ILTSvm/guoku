@@ -52,7 +52,7 @@
 /* 2 */
 /***/ function(module, exports) {
 
-	module.exports = "<header>	<div class=\"basicHeader\">		<div><img src=\"/images/top_search_logo.png\" alt=\"\"></div>		<form>			<!-- <input id=\"searchTxt\" type=\"text\" /> -->			<a id=\"searchBtn\" href=\"#\"><i class=\"icon iconfont\">&#xe606;</i></a>			<a id=\"header-listbar\" href=\"#\"><i class=\"icon iconfont\">&#x3557;</i></a>		</form>	</div>	<ul>		<li><a href=\"./index.html\">首页</a></li>		<li><a href=\"./articles.html\">图文</a></li>		<li><a href=\"./categorygroup.html\">专题</a></li>	</ul>	<ul>		<li><a href=\"./categorygroup.html\">好店</a></li>		<li><a href=\"./login.html\">登录</a></li>		<li><a href=\"./register.html\">注册</a></li>	</ul></header>"
+	module.exports = "<header>	<div class=\"basicHeader\">		<div><img src=\"/images/top_search_logo.png\" alt=\"\"></div>		<form>			<input id=\"searchTxt\" type=\"text\" placeholder = \"男装/T恤/家电/水果/酒水\"/> 			<a id=\"searchBtn\" href=\"javascript:void\"><i class=\"icon iconfont\">&#xe606;</i></a>			<a id=\"header-listbar\" href=\"javascript:void\"><i class=\"icon iconfont\">&#x3557;</i></a>		</form>	</div>	<ul>		<li><a href=\"./index.html\">首页</a></li>		<li><a href=\"./articles.html\">图文</a></li>		<li><a href=\"./categorygroup.html\">专题</a></li>	</ul>	<ul>		<li><a href=\"./categorygroup.html\">好店</a></li>		<li><a href=\"./login.html\">登录</a></li>		<li><a href=\"./register.html\">注册</a></li>	</ul></header>"
 
 /***/ },
 /* 3 */,
@@ -78,6 +78,7 @@
 			$('#searchBtn').click(function(){
 				var keyword = $('#searchTxt').val();
 				console.log(keyword);
+				window.location.href = "/build/categorygroup.html?value="+keyword; 
 			});
 		})()
 	};
@@ -10341,7 +10342,10 @@
 
 	if(common.GetRequest("categorygroup")){
 		var _url = 'https://wlwywlqk.cn/goods/getData?categorygroup='+common.GetRequest("categorygroup")+'&pageindex=1&pagesize=40';
-	}else{
+	}else if(common.GetRequest("value")){
+		var _url = 'https://wlwywlqk.cn/goods/search?search='+common.GetRequest("value")+'&pageindex=1&pagesize=40';
+	}
+	else{
 		var _url = 'https://wlwywlqk.cn/goods/getData?pageindex=1&pagesize=50';
 	}
 	 
@@ -10350,9 +10354,15 @@
 		{
 			url: _url,
 			success:function(data){
-				var datajson=JSON.parse(data);
-				var html = template('w_index_list', {product:datajson});
-				document.getElementById('list-box').innerHTML = html;
+				if(data){
+					var datajson=JSON.parse(data);
+					var html = template('w_index_list', {product:datajson});
+					document.getElementById('list-box').innerHTML = html;
+				}else{
+					var html = '<li><p style = "width:100%;text-align:center;font-size:16px;height:100%">未查询到结果</p></li>';
+					document.getElementById('list-box').innerHTML = html;
+				}
+
 			}
 		}
 	],function(){
@@ -10361,7 +10371,6 @@
 
 	 
 	 
-
 
 	var headerAnimate = __webpack_require__(4);
 
@@ -10445,7 +10454,7 @@
 	                return strs[1];
 	            }else{
 	            	  console.log(_str);
-	            	  console.log(strs[0]);
+	            	  console.log(strs[1]);
 	                return false;
 	            }
 	            // 直接弹出第一个参数 （如果有多个参数 还要进行循环的;

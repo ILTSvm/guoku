@@ -63,7 +63,7 @@ var common = {
                 return strs[1];
             }else{
             	  console.log(_str);
-            	  console.log(strs[0]);
+            	  console.log(strs[1]);
                 return false;
             }
             // 直接弹出第一个参数 （如果有多个参数 还要进行循环的;

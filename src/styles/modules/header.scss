@@ -23,12 +23,18 @@ header{
 	form{
 		@include flexbox();
 		@include flex();
-		@include justify-content(flex-end);
+		@include justify-content(flex-end); 
 		@include align-items();
+		input{
+		    color:#ccc;
+		    background: #fff;
+		    border:0; 
+		    border-bottom:.01rem solid #ccc;  
+		}
 		a{
 			display: block;
 			width: .22rem;
-			padding: 0 .15rem;
+			padding: 0 .15rem; 
 			margin-right: .15rem;
 			i{
 				color: #000;
