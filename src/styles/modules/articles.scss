@@ -15,7 +15,7 @@
 				@include flex();
 				@include wrap(wrap);
 				width: 100%;
-				margin: .3rem 0 .04rem;
+				margin: .3rem 0 .04rem; 
 			    .curA{
 			    	background: #f1f1f1;
 			    }
@@ -44,7 +44,7 @@
 					@include flex();
 					@include flex-direction(column);
 					width: 100%;
-					li:last-child{
+					li:last-child{ 
 						margin-bottom: .2rem;
 					}
 					li{
