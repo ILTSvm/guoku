@@ -20,7 +20,7 @@ $('.loginform').submit(function () {
         },
         success: function (res) {
             if (res === "1") {
-                location.href = '/index.html';
+                location.href = '/bulid/index.html';
             } else {
                 $('#tip').text(res);
                 setTimeout(function () {

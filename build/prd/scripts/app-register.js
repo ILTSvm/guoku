@@ -10358,7 +10358,7 @@
 	            },
 	            success: function (res) {
 	                if (res === "1") {
-	                    location.href = '/login.html';
+	                    location.href = '/build/login.html';
 	                } else {
 	                    $('#tip').text(res);
 	                    setTimeout(function () {
