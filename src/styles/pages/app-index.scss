@@ -8,10 +8,18 @@
 // 页面所需模块
 
 // test header and footer statr
+<<<<<<< HEAD
    @import "../modules/header";
    @import "../modules/footer"; 
+=======
+@import "../modules/header";
+// @import "../modules/footer";
+>>>>>>> e8cf2e06eccbea06809bf98bcd47e7dd77c5d3d2
 // test header and footer end
 
-body{
-    background: #FF0;
+
+// @import "../modules/index_imageText";
+@import "../modules/images_text";
+body{ 
+    // background: #FF0;
 }
