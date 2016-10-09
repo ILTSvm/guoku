@@ -7,9 +7,9 @@ $('#container').append(list);
 $('#container').append(footer);
 
 if(common.GetRequest("categorygroup")){
-	var _url = 'http://wlwywlqk.cn/goods/getData?categorygroup='+common.GetRequest("categorygroup")+"&pageindex=1&pagesize=100";
+	var _url = 'https://wlwywlqk.cn/goods/getData?categorygroup='+common.GetRequest("categorygroup")+'&pageindex=1&pagesize=40';
 }else{
-	var _url = 'http://wlwywlqk.cn/goods/getData?pageindex=1&pagesize=100';
+	var _url = 'https://wlwywlqk.cn/goods/getData?pageindex=1&pagesize=50';
 }
  
 common.final(

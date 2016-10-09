@@ -21,11 +21,11 @@ $('#container').append(list);
 $('#container').append(footer);
  
 common.final([{
-    url: 'http://wlwywlqk.cn/goods/getdata?pageindex=' + Math.floor(Math.random() * 100) + '&pagesize=12',
+    url: 'https://wlwywlqk.cn/goods/getdata?pageindex=' + Math.floor(Math.random() * 100) + '&pagesize=12',
     success: banner.initbanner2,
 },
 	{
-		url: 'http://wlwywlqk.cn/goods/getData?pageindex=1&pagesize=50',
+		url: 'https://wlwywlqk.cn/goods/getData?pageindex=1&pagesize=50',
 		success:function(data){
 			console.log(data);
 			var datajson=JSON.parse(data);

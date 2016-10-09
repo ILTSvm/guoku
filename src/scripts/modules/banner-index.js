@@ -32,7 +32,7 @@ var banner = {
             }
         };
         for (var i = 0; i < len; i++) {
-            tpldata.list[i] = '<a class="banneritem" href="/pages/detail.html?_id=' + goods[i]._id + '"><img src="http://wlwywlqk.cn/img/' + goods[i].piclists[0] + '"><span class="banneritemname">' + goods[i].name + '</span><span class="banneritemprice">￥' + goods[i].price + '</span></a>';
+            tpldata.list[i] = '<a class="banneritem" href="./detail.html?_id=' + goods[i]._id + '"><img src="https://wlwywlqk.cn/img/' + goods[i].piclists[0] + '"><span class="banneritemname">' + goods[i].name + '</span><span class="banneritemprice">￥' + goods[i].price + '</span></a>';
         }
         $('#goodsbanner').html(common.tpl('bannertpl', tpldata));
     },

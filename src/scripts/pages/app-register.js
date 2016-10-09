@@ -14,7 +14,7 @@ $('.registerform').submit(function () {
     var rpassword = $('#rpassword').val();
     if (password === rpassword) {
         $.ajax({
-            url: 'http://wlwywlqk.cn/users/register',
+            url: 'https://wlwywlqk.cn/users/register',
             type: 'post',
             data: {
                 username: username,
@@ -23,7 +23,7 @@ $('.registerform').submit(function () {
             },
             success: function (res) {
                 if (res === "1") {
-                    location.href = '/pages/login.html';
+                    location.href = '/login.html';
                 } else {
                     $('#tip').text(res);
                     setTimeout(function () {

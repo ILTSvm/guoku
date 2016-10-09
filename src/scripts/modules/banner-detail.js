@@ -6,7 +6,7 @@ $('body').prepend(bannertpl);
 var banner = {
     banner2: (function () {
         $.ajax({
-            url: 'http://wlwywlqk.cn/goods/getdata?pageindex=' + Math.floor(Math.random() * 100) + '&pagesize=12',
+            url: 'https://wlwywlqk.cn/goods/getdata?pageindex=' + Math.floor(Math.random() * 100) + '&pagesize=12',
             success: function (data) {
                 var goods = JSON.parse(data);
                 var len = goods.length;
@@ -19,7 +19,7 @@ var banner = {
                     }
                 };
                 for (var i = 0; i < len; i++) {
-                    tpldata.list[i] = '<a class="banneritem" href="/detail?id=' + goods[i]._id + '"><img src="http://wlwywlqk.cn/img/' + goods[i].piclists[0] + '"><span class="banneritemname">' + goods[i].name + '</span><span class="banneritemprice">￥' + goods[i].price + '</span></a>';
+                    tpldata.list[i] = '<a class="banneritem" href="/detail?id=' + goods[i]._id + '"><img src="https://wlwywlqk.cn/img/' + goods[i].piclists[0] + '"><span class="banneritemname">' + goods[i].name + '</span><span class="banneritemprice">￥' + goods[i].price + '</span></a>';
                 }
                 $('#goodsbanner').html(common.tpl('bannertpl', tpldata));
             }
